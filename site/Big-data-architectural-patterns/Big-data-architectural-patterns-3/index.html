@@ -17,7 +17,7 @@
     
     
       
-        <title>AWSreInvent2018 5 - Big Data System Design</title>
+        <title>Collect Layer - Big Data System Design</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#collect-layer" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AWSreInvent2018 5
+              Collect Layer
             
           </span>
         </div>
@@ -214,25 +219,27 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_2">
-          AWSReinvent2018
+          Big data architectural Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="AWSReinvent2018" data-md-level="1">
+      <nav class="md-nav" aria-label="Big data architectural Patterns" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          AWSReinvent2018
+          Big data architectural Patterns
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -242,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AWSreInvent2018-1.md" class="md-nav__link">
+      <a href="../Big-data-architectural-patterns-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -256,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AWSreInvent2018-2.md" class="md-nav__link">
+      <a href="../Big-data-architectural-patterns-2/" class="md-nav__link">
         Big Data Architectural Principles
       </a>
     </li>
@@ -268,11 +275,95 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../AWSreInvent2018-3.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Collect Layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Collect Layer
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collect-layer" class="md-nav__link">
+    Collect Layer
+  </a>
+  
+    <nav class="md-nav" aria-label="Collect Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-data-sources" class="md-nav__link">
+    Types of data sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-streamingmessage-storage-should-i-use" class="md-nav__link">
+    Which Streaming/Message Storage should I use?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-fileobject-storage-should-i-use" class="md-nav__link">
+    Which File/Object Storage should I use?
+  </a>
+  
+    <nav class="md-nav" aria-label="Which File/Object Storage should I use?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-tiering" class="md-nav__link">
+    Data Tiering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-store-should-i-use" class="md-nav__link">
+    Which Store should I use?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -302,6 +393,68 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collect-layer" class="md-nav__link">
+    Collect Layer
+  </a>
+  
+    <nav class="md-nav" aria-label="Collect Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-data-sources" class="md-nav__link">
+    Types of data sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-streamingmessage-storage-should-i-use" class="md-nav__link">
+    Which Streaming/Message Storage should I use?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-fileobject-storage-should-i-use" class="md-nav__link">
+    Which File/Object Storage should I use?
+  </a>
+  
+    <nav class="md-nav" aria-label="Which File/Object Storage should I use?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-tiering" class="md-nav__link">
+    Data Tiering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-store-should-i-use" class="md-nav__link">
+    Which Store should I use?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -312,15 +465,120 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/AWSReinvent2018/AWSreInvent2018-5.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/Big-data-architectural-patterns/Big-data-architectural-patterns-3.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>AWSreInvent2018 5</h1>
+  <h1>Collect Layer</h1>
 
-
+<h2 id="collect-layer">Collect Layer</h2>
+<p><img alt="img_6.png" src="../images/img_6.png" /></p>
+<h3 id="types-of-data-sources">Types of data sources</h3>
+<p><img alt="img_8.png" src="../images/img_8.png" /><br>
+In collection phase, often times you have different data sources -&gt;<br>
+- transactional databases like relational databases, MongoDB, or NOSql database.<br>
+Often times these are records that you need to be able to analyze and process.<br>
+We can call those <strong>Transactions</strong><br>
+- Similarly, you might have log data like Media files, Application Log files.<br>
+These are large <strong>Files/Objects</strong> that you may be needing to store.<br>
+- Finally, we have streaming data like device sensors, IoT platforms.<br>
+These are <strong>Events</strong> data.<br></p>
+<p>Each of those collections methods often require different way of collecting of data.<br></p>
+<p>And, often times, storing these data is also different. <br>
+For Transactional data, it usually goes into NoSQL or relational database.<br>
+(we will discuss the criteria for this).<br>
+For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object store for which datalake based on HDFS/S3 is needed.<br>
+For stream storage, we have 3 main options -&gt;<br>
+- Apache Kafka <br>
+  - open source project.<br>
+  - well established.<br>
+  - High throughput distributed streaming platform.<br>
+  - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br>
+- Amazon Kinesis Data Streamings <br>
+  - Managed Stream <strong>storage</strong><br>
+  - for example, here we define number of shards, and each shard pcoesses a 1000 records/seconds.<br> 
+  Say, you wanna scale up to 100,000 records, you would only need to change the number of shards required, and not be worried about number of servers being used, etc.<br>
+- Amazon Kinesis Data Firehose<br>
+  - Managed <strong>data delivery</strong> <br>
+  - lets say you have streaming data, and instead of capturing real time insights, you want to capture that data, and do some sort of advanced processing or offline procesing of that data.<br>
+  - here AWS Kinesis Firehose comes into picture. It allows you configure an end point to be abel to store thet data. This could be S3 bucket (data lake) or Elastic Search (ELK Stack). <br>
+  This allows you to configure various destionations in order to store the data as the data is flowing in.<br>
+  In data streams you configure number of shards.<br>
+  In firehose, its purely based on amount of data that is sent though that pipe.<br> 
+    - So, you dont have hvae to pre-provision, but there are soft limits to amount of data to be processed per second.<br></p>
+<h3 id="which-streamingmessage-storage-should-i-use">Which Streaming/Message Storage should I use?</h3>
+<p><img alt="img_7.png" src="../images/img_7.png" /><br></p>
+<p>SQS (Simple Queue Service) Vs Streaming Storage -&gt;<br>
+- If your use case if a simple producer and single consumer - go for SQS.<br>
+- If yours is a case of complex architecture wherein you have multiple consumers and also want to store stream data, opt for Stream Storage.<br></p>
+<h3 id="which-fileobject-storage-should-i-use">Which File/Object Storage should I use?</h3>
+<p><img alt="img_9.png" src="../images/img_9.png" /><br>
+Here S3/HDFS are defacto standards.<br></p>
+<ol>
+<li>
+<p>S3 allows you to build your data lake in a robust manner.<br>
+You can run various analytics on it.<br>
+Its natively supported by wide number of tools including hadoop ecosystem  like HDFS, presto, hive etc can talk to S3 to be able to read and process that data.<br></p>
+</li>
+<li>
+<p>Decouple Storage and Compute<br></p>
+</li>
+<li>no need to run compute clusters for storage (<strong>unlike HDFS</strong>)<br></li>
+<li>S3 is cheap ~ Storage &amp; EMR for compute<br></li>
+<li>in HDFS, you need to keep cluster always on.<br></li>
+<li>can run transient Amazon EMR clusters with  Amazon EC2 spot instances.<br></li>
+<li>multiple &amp; heterogenous anlaysis clusters  and servcies can use the same data.<br></li>
+<li>
+<p>consider a scenario wherein you ingest data into S3. Now since storage si separated from compute, youcan run different clustes on top of same source of data.<br>
+  For example, one load can be of spark on EMR(based on reserved instances), and other for GPUs (based on spot instances)<br></p>
+</li>
+<li>
+<p>Designed for 99.999999999 % durability (11 Nines).<br>
+Tremendous data reliability.<br></p>
+</li>
+<li>
+<p>Data replication within the same region is done automatically.<br></p>
+</li>
+<li>
+<p>Security - it used encryption at rest and in transit both.<br></p>
+</li>
+</ol>
+<h4 id="data-tiering">Data Tiering</h4>
+<p><img alt="img_10.png" src="../images/img_10.png" /><br>
+Its about maintaining data in different tiers based on use case.<br></p>
+<p>Use of s3 implies no use of HDFS?<br>
+No. One can store their working datasets like quick analysis intermediate data in HDFS for faster access.<br>
+For example, say you to do some analysis on data that involves iterative reads, and here you can use HDFS storage on EMR cluster.<br></p>
+<p>AWS gives S3 analytics report that recommends which object should be placed in which tier.<br></p>
+<p>Now, lets talk about databases.<br>
+<img alt="img_11.png" src="../images/img_11.png" /><br>
+When it comes to databases, we have large number of options based on purpose.<br></p>
+<p>|Purpose|Database |
+|caching|AWS elasticCache, DynamoDB Accelerator|
+|Graph DB | Amazon Neptune|
+|Key-value document| Amazon DynamoDB|
+|SQL/RDBMS|Amazon RDS (Relational Database Service)|</p>
+<p>Amazon DynamoDB Accelerator (DAX) - its a dynamoDB Front end which has a write-through cache.<br></p>
+<h3 id="which-store-should-i-use">Which Store should I use?</h3>
+<p><img alt="img_12.png" src="../images/img_12.png" /><br></p>
+<p>Choosing a right database involves asking right questions, including -&gt;<br>
+- what is the Data Structure ?<br>
+- How will data be accessed?<br>
+- What is the temperature of the data?<br>
+- what will be solution cost?<br></p>
+<p><img alt="img_13.png" src="../images/img_13.png" /><br></p>
+<p><img alt="img_14.png" src="../images/img_14.png" /><br></p>
+<p>What is the data structure?<br>
+- Do I have a very fixed schema?<br>
+- am I doing key-value lookups -&gt; eg - we have tons of session data, and we can use dynamoDB or key-value store.<br>
+- is it very very relational data such that you are constantly traversing  the graphs<br></p>
+<p>Also data access pattern is important.<br>
+eg- <br>
+- amazon aurora - very very high throughput transactional data need<br>
+- if you need analytical capability of OLAP then use Amazon Redshift.<br></p>
+<p><img alt="img_15.png" src="../images/img_15.png" /><br></p>
 
               
             </article>
@@ -330,6 +588,26 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Big-data-architectural-patterns-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Big Data Architectural Principles" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Big Data Architectural Principles
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

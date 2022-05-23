@@ -14,7 +14,7 @@ theme:
 
 nav:
   - Home: index.md
-  - AWSReinvent2018:
-      - Introduction : AWSReinvent2018/AWSreInvent2018-1.md
-      - Big Data Architectural Principles : AWSReinvent2018/AWSreInvent2018-2.md
-      - Collect Layer : AWSReinvent2018/AWSreInvent2018-3.md
+  - Big data architectural Patterns:
+      - Introduction : Big-data-architectural-patterns/Big-data-architectural-patterns-1.md
+      - Big Data Architectural Principles : Big-data-architectural-patterns/Big-data-architectural-patterns-2.md
+      - Collect Layer : Big-data-architectural-patterns/Big-data-architectural-patterns-3.md

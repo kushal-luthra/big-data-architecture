@@ -1,6 +1,7 @@
 # Big Data Architectural Principles
 
-![img_3.png](images/img_3.png)
+![img_3.png](images/img_3.png)<br>
+
 1. build loosely coupled or decoupled system. <br>
 This holds true not just for Big Data Systems, but for any system. <br>
 This means - the way I analyze my data shouldn't be dependent on the way I analyze my data. <br>
