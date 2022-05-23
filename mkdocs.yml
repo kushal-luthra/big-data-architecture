@@ -14,3 +14,7 @@ theme:
 
 nav:
   - Home: index.md
+  - AWSReinvent2018:
+      - Introduction : AWSReinvent2018/AWSreInvent2018-1.md
+      - Big Data Architectural Principles : AWSReinvent2018/AWSreInvent2018-2.md
+      - Collect Layer : AWSReinvent2018/AWSreInvent2018-3.md
