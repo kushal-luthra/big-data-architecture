@@ -1,0 +1,15 @@
+site_name: Big Data System Design
+site_author: Kushal Luthra
+site_description: Big Data Architecture & principles
+
+repo_name: big-data-architecture
+repo_url: https://github.com/kushal-luthra/big-data-architecture
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2022 Kushal Luthra
+
+theme:
+  name: material
+  language: en
+nav:
+  - Home: index.md
