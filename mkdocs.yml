@@ -11,5 +11,6 @@ copyright: Copyright &copy; 2022 Kushal Luthra
 theme:
   name: material
   language: en
+
 nav:
   - Home: index.md
