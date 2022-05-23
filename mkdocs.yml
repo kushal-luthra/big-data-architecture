@@ -18,3 +18,12 @@ nav:
       - Introduction : Big-data-architectural-patterns/Big-data-architectural-patterns-1.md
       - Big Data Architectural Principles : Big-data-architectural-patterns/Big-data-architectural-patterns-2.md
       - Collect Layer : Big-data-architectural-patterns/Big-data-architectural-patterns-3.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kushal-luthra
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/kushal_luthra
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/kushalluthra/
