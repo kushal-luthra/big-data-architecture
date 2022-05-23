@@ -17,5 +17,12 @@ Virtualized - eg- EC2 instances that we create & install kafka on top of it. Cus
 Managed Services - EMR (hadoop platform as a service), RDS - managed by AWS - customers still thinking about requirements like what configuration you need, what should be auto-scaling policy etc.
 Serverless/Clusterless/Containerized - Lambda, Athena, Glue - tehse are services that abstract out the servers away from you.
 
+Various services - both open source and AWS based are mentioned below -
+![img_1.png](img_1.png)
 
-
+Going forward we will discuss ->
+* different kind of reference architectures.
+* what tools should one choose?
+* How?
+* Why?
+![img_2.png](img_2.png)
