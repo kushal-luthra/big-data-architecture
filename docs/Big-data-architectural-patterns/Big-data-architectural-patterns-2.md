@@ -38,25 +38,27 @@ If you architect it correctly, say you are building a hadoop system and are deco
 This is a growing trend wherein more and more companies are leveraging ML to build their competitive advantages. <br>
 
 ## A simplified data processing pipeline
-below, we see simplified data processing pipeline.
-![img_4.png](images/img_4.png)
+Below, we see simplified data processing pipeline.<br><br>
+![img_4.png](images/img_4.png)<br>
 
-Your exact use case may not match it, but you should look at logical constructs here.
+Your exact use case may not match it, but you should look at logical constructs here.<br>
 
-for example, in  Collect layer, you need to ask questions like ->
-- How am I gonna capture and collect this information?
-- If I have different datasets, I may not be collecting and storing these datasets in the same way.
-- If I have GPS data or clickstream data, I would like to collect it dir=fferently from imagery or satellite data.
+for example, in  Collect layer, you need to ask questions like -><br>
+- How am I gonna capture and collect this information?<br>
+- If I have different datasets, I may not be collecting and storing these datasets in the same way.<br>
+- If I have GPS data or clickstream data, I would like to collect it differently from imagery or satellite data.<br>
 
-You must also note there is a cycle here. Its not exactly a waterfall model. 
-Often times you collect and store raw data, and that raw data is in original form like csv, json etc.
-Then you often times would like to take that raw data and create curated datasets - query optimized datasets to be able to very rapidly access that data. This could be through ML, Data warehousing etc. 
-This is a iterative process wherein you take raw data, and pass it through various transformations processes, and convert it to normalized/den-normalized form in order for it to be consumed by different stakeholders.
+You must also note there is a cycle here.<br>
+Its not exactly a waterfall model. <br>
+Often times you collect and store raw data, and that raw data is in original form like csv, json etc.<br>
+Then you often times would like to take that raw data and create curated datasets - query optimized datasets to be able to very rapidly access that data. <br>
+This could be through ML, Data warehousing etc.<br> 
+This is a iterative process wherein you take raw data, and pass it through various transformations processes, and convert it to normalized/de-normalized form in order for it to be consumed by different stakeholders.<br>
 
 
 
 ## What is the temperature of my data?
 ![img_5.png](images/img_5.png)
 
-Often times we talk about temperature of your data, that means velocity of your data, your queries and your analytics.
-We will discuss about temperature across those specturms.
+Often times we talk about temperature of your data, that means velocity of your data, your queries and your analytics.<br>
+We will discuss about temperature across those spectrums.<br>

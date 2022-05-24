@@ -375,6 +375,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aboutme.md" class="md-nav__link">
+        About Me
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -491,16 +506,16 @@ For Transactional data, it usually goes into NoSQL or relational database.<br>
 (we will discuss the criteria for this).<br>
 For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object store for which datalake based on HDFS/S3 is needed.<br>
 For stream storage, we have 3 main options -&gt;<br>
-- Apache Kafka <br>
-  - open source project.<br>
-  - well established.<br>
-  - High throughput distributed streaming platform.<br>
-  - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br>
-- Amazon Kinesis Data Streamings <br>
-  - Managed Stream <strong>storage</strong><br>
+<strong>Apache Kafka <br></strong>
+    - open source project.<br>
+    - well established.<br>
+    - High throughput distributed streaming platform.<br>
+    - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br></p>
+<p><strong>Amazon Kinesis Data Streaming</strong>
+  - Managed <strong>Stream storage</strong><br>
   - for example, here we define number of shards, and each shard pcoesses a 1000 records/seconds.<br> 
-  Say, you wanna scale up to 100,000 records, you would only need to change the number of shards required, and not be worried about number of servers being used, etc.<br>
-- Amazon Kinesis Data Firehose<br>
+  Say, you wanna scale up to 100,000 records, you would only need to change the number of shards required, and not be worried about number of servers being used, etc.<br></p>
+<p><strong>Amazon Kinesis Data Firehose</strong>
   - Managed <strong>data delivery</strong> <br>
   - lets say you have streaming data, and instead of capturing real time insights, you want to capture that data, and do some sort of advanced processing or offline procesing of that data.<br>
   - here AWS Kinesis Firehose comes into picture. It allows you configure an end point to be abel to store thet data. This could be S3 bucket (data lake) or Elastic Search (ELK Stack). <br>
@@ -516,35 +531,21 @@ For stream storage, we have 3 main options -&gt;<br>
 <h3 id="which-fileobject-storage-should-i-use">Which File/Object Storage should I use?</h3>
 <p><img alt="img_9.png" src="../images/img_9.png" /><br>
 Here S3/HDFS are defacto standards.<br></p>
-<ol>
-<li>
 <p>S3 allows you to build your data lake in a robust manner.<br>
 You can run various analytics on it.<br>
-Its natively supported by wide number of tools including hadoop ecosystem  like HDFS, presto, hive etc can talk to S3 to be able to read and process that data.<br></p>
-</li>
-<li>
-<p>Decouple Storage and Compute<br></p>
-</li>
-<li>no need to run compute clusters for storage (<strong>unlike HDFS</strong>)<br></li>
-<li>S3 is cheap ~ Storage &amp; EMR for compute<br></li>
-<li>in HDFS, you need to keep cluster always on.<br></li>
-<li>can run transient Amazon EMR clusters with  Amazon EC2 spot instances.<br></li>
-<li>multiple &amp; heterogenous anlaysis clusters  and servcies can use the same data.<br></li>
-<li>
-<p>consider a scenario wherein you ingest data into S3. Now since storage si separated from compute, youcan run different clustes on top of same source of data.<br>
+It is natively supported by wide number of tools including hadoop ecosystem  like HDFS, presto, hive etc can talk to S3 to be able to read and process that data.<br></p>
+<p>Decouple Storage and Compute<br>
+- no need to run compute clusters for storage (<strong>unlike HDFS</strong>)<br>
+   - S3 is cheap ~ Storage &amp; EMR for compute<br>
+   - in HDFS, you need to keep cluster always on.<br>
+- can run transient Amazon EMR clusters with  Amazon EC2 spot instances.<br>
+- multiple &amp; heterogenous anlaysis clusters  and servcies can use the same data.<br>
+  - consider a scenario wherein you ingest data into S3. Now since storage si separated from compute, youcan run different clustes on top of same source of data.<br>
   For example, one load can be of spark on EMR(based on reserved instances), and other for GPUs (based on spot instances)<br></p>
-</li>
-<li>
 <p>Designed for 99.999999999 % durability (11 Nines).<br>
 Tremendous data reliability.<br></p>
-</li>
-<li>
 <p>Data replication within the same region is done automatically.<br></p>
-</li>
-<li>
 <p>Security - it used encryption at rest and in transit both.<br></p>
-</li>
-</ol>
 <h4 id="data-tiering">Data Tiering</h4>
 <p><img alt="img_10.png" src="../images/img_10.png" /><br>
 Its about maintaining data in different tiers based on use case.<br></p>

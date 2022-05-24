@@ -18,6 +18,7 @@ nav:
       - Introduction : Big-data-architectural-patterns/Big-data-architectural-patterns-1.md
       - Big Data Architectural Principles : Big-data-architectural-patterns/Big-data-architectural-patterns-2.md
       - Collect Layer : Big-data-architectural-patterns/Big-data-architectural-patterns-3.md
+  - About Me: aboutme.md
 
 extra:
   social:
