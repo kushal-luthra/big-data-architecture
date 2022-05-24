@@ -1,4 +1,4 @@
-# Welcome to Big Data System Design
+# Welcome to Big Data Architecture
 
 **Author** : Kushal Luthra <br>
 **repo url** : https://github.com/kushal-luthra/big-data-architecture

@@ -16,13 +16,16 @@ Now, lets look at different model of delivering big data services.<br>
 **Virtualized** - eg- EC2 instances that we create & install kafka on top of it. Customer owns environment and manages it themselves.<br>
 **Managed Services** - EMR (hadoop platform as a service), RDS - managed by AWS - customers still thinking about requirements like what configuration you need, what should be auto-scaling policy etc.<br>
 **Serverless/Clusterless/Containerized** - Lambda, Athena, Glue - these are services that abstract out the servers away from you.<br>
+This means users can focus on core use case instead of being caught up in acquiring cluster & configuring it, installing software etc. <br>
 
 **Various services** - both open source and AWS based are mentioned below -<br>
 ![img_1.png](images/img_1.png)<br>
 
-Going forward we will discuss -><br>
-* different kind of reference architectures.<br>
-* what tools should one choose?<br>
+### Big Data Challenges
+Lets start with the challenge first.
+As a customer, one would like to have answers to questions like ->
+* Is there a reference architecture for my use case?<br>
+* If yes, what tools should one choose?<br>
 * How?<br>
 * Why?<br><br>
 ![img_2.png](images/img_2.png)<br>

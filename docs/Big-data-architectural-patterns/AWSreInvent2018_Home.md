@@ -1,7 +1,7 @@
 # Big Data Analytics Architectural Patterns and Best Practices 
 
 Topics -> 
-- Big Data challenges
+- Big Data Challenges
 - Architectural Principles
 - How to simplify Big Data Processing
 - What Technologies you should use?

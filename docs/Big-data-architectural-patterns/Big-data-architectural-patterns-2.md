@@ -1,12 +1,14 @@
-# Big Data Architectural Principles
+## Big Data Architectural Principles
+Before we discuss the answer to Big Data Challenges, lets discuss the key architectural principles.<br>
 
 ![img_3.png](images/img_3.png)<br>
 
-1. build loosely coupled or decoupled system. <br>
+1. Build loosely coupled or decoupled system. <br>
 This holds true not just for Big Data Systems, but for any system. <br>
+As there is separation of concerns, it allows you to iterate over each and every sub-system, and so you could truly build and eveolve over time. <br> 
+This makes you **future-proof**. <br><br>
 This means - the way I collect my data shouldn't be dependent on the way I analyze my data. <br>
 So, I could change the way I collect my data by changing the tool and it shouldn't be impacting the way I store, process and/or analyze my data. <br>
-This lets you be future-proof, lets you iterate, and lets you migrate over time. <br><br>
 
 2. Being able to pick right tool for the right Job. <br>
 If your system is loosely coupled, it gives you flexibility to pick right tool for right Job. <br>
@@ -19,7 +21,7 @@ Eg-  <br>
 3. Leverage managed and serverless services - <br>
 Not an architectural principle, but more of a recommendation. <br>
 By leveraging managed and serverless services, you can focus on what really matters. <br>
-It lets you focus on analytics, the transformations, the ETL, rather than loading softwares and other pieces. <br><br>
+It lets you focus on analytics, the transformations, the ETL, rather than loading softwares, ensure their upgrade. etc. This is all handled by vendor behind the scenes. <br><br>
 
 4. Use event-journaling design Patterns - <br>
 It means as you are collecting data into big data systems its a good practice to not override your data. <br>
@@ -29,6 +31,7 @@ Why - if you have large volume of data, and if there is ever an issue like -> <b
    ii. you accidently delete your data,
  ...you have the option to replay history and regenerate your data. <br>
  So, go for immutable datasets (data lake), materialized views. <br><br>
+When you want to build analytical systems, use immutable datasets (i.e. Data lake) where you want to capture State of an application in order to load as materialized views. <br>
 
 5. Be cost-conscious <br>
 Lot of times, big data doesnt have to mean big cost. <br>
@@ -49,7 +52,7 @@ for example, in  Collect layer, you need to ask questions like -><br>
 - If I have GPS data or clickstream data, I would like to collect it differently from imagery or satellite data.<br>
 
 You must also note there is a cycle here.<br>
-Its not exactly a waterfall model. <br>
+It's not exactly a waterfall model. <br>
 Often times you collect and store raw data, and that raw data is in original form like csv, json etc.<br>
 Then you often times would like to take that raw data and create curated datasets - query optimized datasets to be able to very rapidly access that data. <br>
 This could be through ML, Data warehousing etc.<br> 
