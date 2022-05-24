@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#data-processing-layer" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -225,14 +230,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Big data architectural Patterns
+          Big data Architectural Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Big data architectural Patterns" data-md-level="1">
+      <nav class="md-nav" aria-label="Big data Architectural Patterns" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Big data architectural Patterns
+          Big data Architectural Patterns
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -271,7 +276,7 @@
   
     <li class="md-nav__item">
       <a href="../Big-data-architectural-patterns-3/" class="md-nav__link">
-        Collect Layer
+        Data Collection Layer
       </a>
     </li>
   
@@ -292,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aboutme.md" class="md-nav__link">
+      <a href="../../aboutme/" class="md-nav__link">
         About Me
       </a>
     </li>
@@ -317,6 +322,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-processing-layer" class="md-nav__link">
+    Data Processing Layer
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Processing Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-batch-analytics" class="md-nav__link">
+    Interactive &amp; Batch Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streamingreal-time-analytics" class="md-nav__link">
+    Streaming/Real-time Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-analytics" class="md-nav__link">
+    Predictive Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-analytics-should-i-use" class="md-nav__link">
+    Which Analytics should I use?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,7 +389,38 @@
 
   <h1>Big data architectural patterns 4</h1>
 
-<p><img alt="img_16.png" src="../images/img_16.png" /></p>
+<h2 id="data-processing-layer">Data Processing Layer</h2>
+<p><img alt="img_16.png" src="../images/img_16.png" /><br></p>
+<h3 id="interactive-batch-analytics">Interactive &amp; Batch Analytics</h3>
+<p>Lets look at interactive &amp; batch analytics. <br>
+<img alt="img.png" src="../images/img_17.png" /> <br></p>
+<ul>
+<li>Elastic Search - useful for Log data Text Search capabilities. <br></li>
+<li>Redshift &amp; Redshift Spectrum - for data warehousing needs. <br></li>
+<li>Athena ~ Hive - perform SQL based queries on Data that resides on S3. <br></li>
+<li>S3 Select - is somewhat similar to Athena, but there are some differences. <br></li>
+<li>You can think about AWS S3 Select as a cost-efficient storage optimization that allows retrieving data that matches the predicate in S3 and glacier aka push down filtering. <br> </li>
+<li>AWS Athena is fully managed analytical service that allows running arbitrary ANSI SQL compliant queries - group by, having, window and geo functions, SQL DDL and DML. <br></li>
+<li>EMR - Its Hadoop &amp; Spark as a service that lets you run various platform applications. <br></li>
+<li>one thing special about EMR is that you have root access to EC2 instances that EMR is using unlike other managed services. <br>
+    eg - in RDS, you ENIN point that allows you to perform database functions, but you cannot do SSH on it. <br></li>
+</ul>
+<h3 id="streamingreal-time-analytics">Streaming/Real-time Analytics</h3>
+<p><img alt="img_1.png" src="../images/img_18.png" /> <br>
+If you look at Hadoop ecosystem, the number of services that perform real-time analytics has been growing - Spark Streaming, Flink, Storm.  <br>
+Just like Athena allows you to perform SQL queries on S3 even though it is not a relational database, AWS Kinesis Data Analytics allows you to perform SQL queries on your real time data even though it is not really a database. <br>
+So you could write SQL - tumbling windows, random cut forest, different sort of expressions to analyze data.</p>
+<p>In respect to AWS Lambda, one thing to note is that it polls every second.<br>
+That means if you are looking for sub-second latency, use other tool like Amazon KCL.<br></p>
+<h3 id="predictive-analytics">Predictive Analytics</h3>
+<p><img alt="img_2.png" src="../images/img_19.png" /> <br></p>
+<p><strong>Application Services</strong><br> 
+One thing is to note that make sure to write your data in open standards like orc, parquet, CSV or JSON. <br>
+That ways you can use different tools with it for your use case. <br></p>
+<p><strong>Platforms</strong><br> 
+This layer allows us to build models and test them.<br></p>
+<h3 id="which-analytics-should-i-use">Which Analytics should I use?</h3>
+<p><img alt="img_3.png" src="../images/img_20.png" /></p>
 
               
             </article>

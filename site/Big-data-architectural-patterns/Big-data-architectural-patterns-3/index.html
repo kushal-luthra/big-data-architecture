@@ -17,7 +17,7 @@
     
     
       
-        <title>Collect Layer - Big Data System Design</title>
+        <title>Data Collection Layer - Big Data System Design</title>
       
     
     
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Collect Layer
+              Data Collection Layer
             
           </span>
         </div>
@@ -232,14 +232,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Big data architectural Patterns
+          Big data Architectural Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Big data architectural Patterns" data-md-level="1">
+      <nav class="md-nav" aria-label="Big data Architectural Patterns" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Big data architectural Patterns
+          Big data Architectural Patterns
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -285,12 +285,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Collect Layer
+          Data Collection Layer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Collect Layer
+        Data Collection Layer
       </a>
       
         
@@ -319,6 +319,19 @@
     Types of data sources
   </a>
   
+    <nav class="md-nav" aria-label="Types of data sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream-storage" class="md-nav__link">
+    Stream Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -337,6 +350,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#s3-as-datalake-storage" class="md-nav__link">
+    S3 as Datalake storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#data-tiering" class="md-nav__link">
     Data Tiering
   </a>
@@ -345,6 +365,20 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-metadata" class="md-nav__link">
+    What about Metadata?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-database" class="md-nav__link">
+    Cache &amp; Database
+  </a>
   
 </li>
         
@@ -383,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aboutme.md" class="md-nav__link">
+      <a href="../../aboutme/" class="md-nav__link">
         About Me
       </a>
     </li>
@@ -427,6 +461,19 @@
     Types of data sources
   </a>
   
+    <nav class="md-nav" aria-label="Types of data sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream-storage" class="md-nav__link">
+    Stream Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -445,6 +492,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#s3-as-datalake-storage" class="md-nav__link">
+    S3 as Datalake storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#data-tiering" class="md-nav__link">
     Data Tiering
   </a>
@@ -453,6 +507,20 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-metadata" class="md-nav__link">
+    What about Metadata?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-database" class="md-nav__link">
+    Cache &amp; Database
+  </a>
   
 </li>
         
@@ -486,26 +554,29 @@
 
 
 
-  <h1>Collect Layer</h1>
+  <h1>Data Collection Layer</h1>
 
 <h2 id="collect-layer">Collect Layer</h2>
 <p><img alt="img_6.png" src="../images/img_6.png" /></p>
 <h3 id="types-of-data-sources">Types of data sources</h3>
-<p><img alt="img_8.png" src="../images/img_8.png" /><br>
-In collection phase, often times you have different data sources -&gt;<br>
+<p><img alt="img_8.png" src="../images/img_8.png" /><br></p>
+<p>In Collection, you need to figure out the type of data you are collecting.
+Often times you have different data sources -&gt;<br>
 - transactional databases like relational databases, MongoDB, or NOSql database.<br>
 Often times these are records that you need to be able to analyze and process.<br>
+They come in the form of Web applications, Mobile Applications, Data Centres, etc. 
 We can call those <strong>Transactions</strong><br>
 - Similarly, you might have log data like Media files, Application Log files.<br>
 These are large <strong>Files/Objects</strong> that you may be needing to store.<br>
 - Finally, we have streaming data like device sensors, IoT platforms.<br>
 These are <strong>Events</strong> data.<br></p>
-<p>Each of those collections methods often require different way of collecting of data.<br></p>
-<p>And, often times, storing these data is also different. <br>
+<p>Each of those collections methods often require different way of <strong>collecting</strong> of data.<br></p>
+<p>And, often times, <strong>storing</strong> these data is also different. <br>
 For Transactional data, it usually goes into NoSQL or relational database.<br>
 (we will discuss the criteria for this).<br>
-For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object store for which datalake based on HDFS/S3 is needed.<br>
-For stream storage, we have 3 main options -&gt;<br>
+For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object store for which datalake based on HDFS/S3 is needed.<br></p>
+<h4 id="stream-storage">Stream Storage</h4>
+<p>For stream storage, we have 4 main options (1 open source &amp; 3 in AWS) -&gt;<br>
 <strong>Apache Kafka <br></strong>
     - open source project.<br>
     - well established.<br>
@@ -513,46 +584,92 @@ For stream storage, we have 3 main options -&gt;<br>
     - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br></p>
 <p><strong>Amazon Kinesis Data Streaming</strong>
   - Managed <strong>Stream storage</strong><br>
-  - for example, here we define number of shards, and each shard pcoesses a 1000 records/seconds.<br> 
-  Say, you wanna scale up to 100,000 records, you would only need to change the number of shards required, and not be worried about number of servers being used, etc.<br></p>
+  - for example, here we define number of shards, and each shard processes a 1000 records/seconds.<br> 
+  Say, you want to scale up to 100,000 records, you would only need to change the number of shards required, and not be worried about number of servers being used, etc.<br>
+  - Thus, <strong>Kinesis is truly serverless</strong>. Where you provision your streams, and specify only shards, and not resources etc.<br>
+  - Kinesis allows real-time analytics.</p>
 <p><strong>Amazon Kinesis Data Firehose</strong>
   - Managed <strong>data delivery</strong> <br>
-  - lets say you have streaming data, and instead of capturing real time insights, you want to capture that data, and do some sort of advanced processing or offline procesing of that data.<br>
-  - here AWS Kinesis Firehose comes into picture. It allows you configure an end point to be abel to store thet data. This could be S3 bucket (data lake) or Elastic Search (ELK Stack). <br>
-  This allows you to configure various destionations in order to store the data as the data is flowing in.<br>
+  - Let's say you have streaming data, and instead of capturing real time insights, you want to capture that data, and do some sort of advanced processing or offline processing of that data.<br>
+  - Here AWS Kinesis Firehose comes into picture. It allows you configure an end point to be able to store that data. This could be S3 bucket (data lake) or Elastic Search (ELK Stack). <br>
+  This allows you to configure various destinations in order to store the data as the data is flowing in.<br>
+  Think of it as a pipe wherein you specify th end-point and that becomes your target location from where you fetch data for your analytics.<br>
   In data streams you configure number of shards.<br>
   In firehose, its purely based on amount of data that is sent though that pipe.<br> 
     - So, you dont have hvae to pre-provision, but there are soft limits to amount of data to be processed per second.<br></p>
+<p><strong>Amazon Managed Streaming for Apache Kafka (Amazon MSK)</strong>
+- This is Amazon managed Kafka service, wherein you can setup kafka cluster with a few clicks.
+- Here AWS manages Kafka cluster, including Zookeeper.</p>
 <h3 id="which-streamingmessage-storage-should-i-use">Which Streaming/Message Storage should I use?</h3>
 <p><img alt="img_7.png" src="../images/img_7.png" /><br></p>
 <p>SQS (Simple Queue Service) Vs Streaming Storage -&gt;<br>
 - If your use case if a simple producer and single consumer - go for SQS.<br>
 - If yours is a case of complex architecture wherein you have multiple consumers and also want to store stream data, opt for Stream Storage.<br></p>
 <h3 id="which-fileobject-storage-should-i-use">Which File/Object Storage should I use?</h3>
+<p>Here S3/HDFS is the defacto standard.<br>
+S3 allows you to store and retrieve any amount of data. <br></p>
+<h4 id="s3-as-datalake-storage">S3 as Datalake storage</h4>
 <p><img alt="img_9.png" src="../images/img_9.png" /><br>
-Here S3/HDFS are defacto standards.<br></p>
-<p>S3 allows you to build your data lake in a robust manner.<br>
-You can run various analytics on it.<br>
-It is natively supported by wide number of tools including hadoop ecosystem  like HDFS, presto, hive etc can talk to S3 to be able to read and process that data.<br></p>
-<p>Decouple Storage and Compute<br>
-- no need to run compute clusters for storage (<strong>unlike HDFS</strong>)<br>
-   - S3 is cheap ~ Storage &amp; EMR for compute<br>
-   - in HDFS, you need to keep cluster always on.<br>
-- can run transient Amazon EMR clusters with  Amazon EC2 spot instances.<br>
-- multiple &amp; heterogenous anlaysis clusters  and servcies can use the same data.<br>
-  - consider a scenario wherein you ingest data into S3. Now since storage si separated from compute, youcan run different clustes on top of same source of data.<br>
-  For example, one load can be of spark on EMR(based on reserved instances), and other for GPUs (based on spot instances)<br></p>
+One of the main use case for S3 is to use it as the centre of your data lake.<br>
+There are a number of reasons for it. <br></p>
+<ol>
+<li>
+<p>It is natively supported by wide number of tools including hadoop ecosystem  like HDFS, presto, hive etc can talk to S3 to be able to read and process that data.<br></p>
+</li>
+<li>
+<p>Decouple Storage and Compute<br></p>
+</li>
+<li>S3 allows you to decouple storage and compute, and this is really powerful. <br></li>
+<li>
+<p>by having your storage outside of the hadoop ecosystem, it allows you to run transient clusters over your dataset. <br>
+    Transient clusters are short-lived. You could introduce steps that involves starting your cluster, processing your data, write output to S3, and terminate the cluster. <br>
+    What is the benefit here?<br></p>
+<ul>
+<li>First, Cost - you pay for what you use.</li>
+<li>Second, it gives scope for innovation &amp; Flexibility. <br>
+For example, multiple &amp; heterogenous anlaysis clusters  and services can use the same data.<br>
+In case of spark processing, you could use EC2 instances which are memory optimized.<br>
+At the same time, you could also have GPUs to run tensorflow and ML on same dataset.
+You could  run spark on EMR(based on reserved instances), and other for GPUs (based on spot instances).</li>
+</ul>
+</li>
+<li>
 <p>Designed for 99.999999999 % durability (11 Nines).<br>
-Tremendous data reliability.<br></p>
-<p>Data replication within the same region is done automatically.<br></p>
+Tremendous data reliability.<br>
+Data replication within the same region is done automatically.<br>
+this makes S3 durable.</p>
+</li>
+<li>
 <p>Security - it used encryption at rest and in transit both.<br></p>
+</li>
+<li>
+<p>Low Cost - its cost effective. One of the ways to optimize S3 is to use Data Tiers (discussed in next section). <br></p>
+</li>
+</ol>
 <h4 id="data-tiering">Data Tiering</h4>
-<p><img alt="img_10.png" src="../images/img_10.png" /><br>
-Its about maintaining data in different tiers based on use case.<br></p>
-<p>Use of s3 implies no use of HDFS?<br>
-No. One can store their working datasets like quick analysis intermediate data in HDFS for faster access.<br>
-For example, say you to do some analysis on data that involves iterative reads, and here you can use HDFS storage on EMR cluster.<br></p>
-<p>AWS gives S3 analytics report that recommends which object should be placed in which tier.<br></p>
+<p><img alt="img_10.png" src="../images/img_10.png" /><br></p>
+<p>The data that you are accessing frequently should be placed in Amazon S3.
+S3 gives you the option (<strong>S3 Standard-IA</strong>) to move your data to move data infrequent access layers, and this is where you save cost.<br>
+There is also <strong>Amazon Glacier</strong> which is a cold storage, and is the data not available for doing analytics - data is stored in Archive. (In S3 Standard-IA, you can do analytics, but here the pricing works frequently.)<br></p>
+<p>If I have data in s3, do I still need HDFS?<br>
+Maybe.<br>
+One can store their working datasets for analysis in HDFS (in EMR cluster) for faster access instead of accessing them from S3.<br></p>
+<h3 id="what-about-metadata">What about Metadata?</h3>
+<p>In order to fully decouple your storage from compute, data is one part of equation, and metadata is other part.
+You need to have both outside the cluster in order to use the transient EMR cluster.<br></p>
+<p><strong>AWS Glue Catalog</strong><br>
+It is a fully managed data catalog, and is Hive metastore compliant.<br></p>
+<p>Search metadata discovery - What is the purpose of Glue Catalog? - It aims to serve as Unified Data Catalog across all the sources on which you want to do data catalog on.<br>
+Amazon Athena, Amazon EMR, Amazon Redshift Spectrum - all these are integrated with the Glue Catalog. <br></p>
+<p>Glue also has utility - Crawlers - which is an application that you can point to your data sources (S3, RDBMS etc), and it will explore the data, and will try to identify teh metadata for you so thaht you create those tables to make it easier to find those schemas.<br>
+So Crawlers used to Detect new data, schema, partitions.<br></p>
+<p><strong>Lakehouse Formation</strong><br>
+When it comes to datalake, you still have to go to a few places to create - S3 (storage), Metadata(Glue Catalog), IAM (security access), etc.<br>
+Lake-formation comes to help you to create a Datalake in AWS within a few minutes.<br>
+It enhances those services with additional metadata, and will also introduce additional data quality jobs that can do task like de-duplication, fina matches where there is no matching id, etc.<br></p>
+<p><strong>Hive Metastore</strong><br>
+If you don't want to go with AWS Glue, then can host your own Hive Metastore on Amazon RDS.<br></p>
+<h3 id="cache-database">Cache &amp; Database</h3>
 <p>Now, lets talk about databases.<br>
 <img alt="img_11.png" src="../images/img_11.png" /><br>
 When it comes to databases, we have large number of options based on purpose.<br></p>
@@ -583,6 +700,8 @@ When it comes to databases, we have large number of options based on purpose.<br
 </tbody>
 </table>
 <p>Amazon DynamoDB Accelerator (DAX) - its a dynamoDB Front end which has a write-through cache.<br></p>
+<p>From Analytics point of view, Database can be source of data from which we pull the data for doing analytics. <br>
+It can also be target of your analytics, wherein you want to push results of your analytics to your database so that you can have some real-time dashboard. </p>
 <h3 id="which-store-should-i-use">Which Store should I use?</h3>
 <p><img alt="img_12.png" src="../images/img_12.png" /><br></p>
 <p>Choosing a right database involves asking right questions, including -&gt;<br>
@@ -592,15 +711,17 @@ When it comes to databases, we have large number of options based on purpose.<br
 - what will be solution cost?<br></p>
 <p><img alt="img_13.png" src="../images/img_13.png" /><br></p>
 <p><img alt="img_14.png" src="../images/img_14.png" /><br></p>
-<p>What is the data structure?<br>
-- Do I have a very fixed schema?<br>
-- am I doing key-value lookups -&gt; eg - we have tons of session data, and we can use dynamoDB or key-value store.<br>
-- is it very very relational data such that you are constantly traversing  the graphs<br></p>
+<p>Main 2 questions are about what is my data structure and how I will access my Data. <br>
+What is the data structure?<br>
+- Do I have a very fixed schema? Then SQL is the way to go, especially you have complex relationships involving Table joins, and this is the way you access the data.<br>
+- If your data is not having fixed schema, you should consider NoSQL database.
+- If your latency requirements is sub-seconds, then you should consider having in-memory Cache in front of your database/NoSQL system.
+- is it very relational data such that you are constantly traversing  the graphs<br></p>
 <p>Also data access pattern is important.<br>
 eg- <br>
-- amazon aurora - very very high throughput transactional data need<br>
+- amazon aurora - very high throughput transactional data need<br>
 - if you need analytical capability of OLAP then use Amazon Redshift.<br></p>
-<p><img alt="img_15.png" src="../images/img_15.png" /><br></p>
+<p><img alt="img_4.png" src="../images/img_21.png" /><br></p>
 
               
             </article>
@@ -628,6 +749,21 @@ eg- <br>
           </div>
         </a>
       
+      
+        
+        <a href="../../aboutme/" class="md-footer__link md-footer__link--next" aria-label="Next: About Me" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About Me
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

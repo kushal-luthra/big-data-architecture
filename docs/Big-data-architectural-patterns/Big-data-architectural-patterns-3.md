@@ -166,4 +166,4 @@ eg- <br>
 - amazon aurora - very high throughput transactional data need<br>
 - if you need analytical capability of OLAP then use Amazon Redshift.<br>
 
-    ![img_4.png](images/img_21.png)
+![img_4.png](images/img_21.png)<br>

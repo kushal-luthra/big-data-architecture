@@ -232,14 +232,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Big data architectural Patterns
+          Big data Architectural Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Big data architectural Patterns" data-md-level="1">
+      <nav class="md-nav" aria-label="Big data Architectural Patterns" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Big data architectural Patterns
+          Big data Architectural Patterns
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -269,8 +269,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Big Data Architectural Principles
@@ -287,14 +285,19 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#big-data-architectural-principles" class="md-nav__link">
+    Big Data Architectural Principles
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#a-simplified-data-processing-pipeline" class="md-nav__link">
@@ -326,7 +329,7 @@
   
     <li class="md-nav__item">
       <a href="../Big-data-architectural-patterns-3/" class="md-nav__link">
-        Collect Layer
+        Data Collection Layer
       </a>
     </li>
   
@@ -347,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aboutme.md" class="md-nav__link">
+      <a href="../../aboutme/" class="md-nav__link">
         About Me
       </a>
     </li>
@@ -371,14 +374,19 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#big-data-architectural-principles" class="md-nav__link">
+    Big Data Architectural Principles
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#a-simplified-data-processing-pipeline" class="md-nav__link">
@@ -412,15 +420,19 @@
 
 
 
-<h1 id="big-data-architectural-principles">Big Data Architectural Principles</h1>
+  <h1>Big Data Architectural Principles</h1>
+
+<h2 id="big-data-architectural-principles">Big Data Architectural Principles</h2>
+<p>Before we discuss the answer to Big Data Challenges, lets discuss the key architectural principles.<br></p>
 <p><img alt="img_3.png" src="../images/img_3.png" /><br></p>
 <ol>
 <li>
-<p>build loosely coupled or decoupled system. <br>
+<p>Build loosely coupled or decoupled system. <br>
 This holds true not just for Big Data Systems, but for any system. <br>
+As there is separation of concerns, it allows you to iterate over each and every sub-system, and so you could truly build and eveolve over time. <br> 
+This makes you <strong>future-proof</strong>. <br><br>
 This means - the way I collect my data shouldn't be dependent on the way I analyze my data. <br>
-So, I could change the way I collect my data by changing the tool and it shouldn't be impacting the way I store, process and/or analyze my data. <br>
-This lets you be future-proof, lets you iterate, and lets you migrate over time. <br><br></p>
+So, I could change the way I collect my data by changing the tool and it shouldn't be impacting the way I store, process and/or analyze my data. <br></p>
 </li>
 <li>
 <p>Being able to pick right tool for the right Job. <br>
@@ -435,7 +447,7 @@ Eg-  <br>
 <p>Leverage managed and serverless services - <br>
 Not an architectural principle, but more of a recommendation. <br>
 By leveraging managed and serverless services, you can focus on what really matters. <br>
-It lets you focus on analytics, the transformations, the ETL, rather than loading softwares and other pieces. <br><br></p>
+It lets you focus on analytics, the transformations, the ETL, rather than loading softwares, ensure their upgrade. etc. This is all handled by vendor behind the scenes. <br><br></p>
 </li>
 <li>
 <p>Use event-journaling design Patterns - <br>
@@ -445,7 +457,8 @@ Why - if you have large volume of data, and if there is ever an issue like -&gt;
    i. your job has a bug, Or <br>
    ii. you accidently delete your data,
  ...you have the option to replay history and regenerate your data. <br>
- So, go for immutable datasets (data lake), materialized views. <br><br></p>
+ So, go for immutable datasets (data lake), materialized views. <br><br>
+When you want to build analytical systems, use immutable datasets (i.e. Data lake) where you want to capture State of an application in order to load as materialized views. <br></p>
 </li>
 <li>
 <p>Be cost-conscious <br>
@@ -466,7 +479,7 @@ This is a growing trend wherein more and more companies are leveraging ML to bui
 - If I have different datasets, I may not be collecting and storing these datasets in the same way.<br>
 - If I have GPS data or clickstream data, I would like to collect it differently from imagery or satellite data.<br></p>
 <p>You must also note there is a cycle here.<br>
-Its not exactly a waterfall model. <br>
+It's not exactly a waterfall model. <br>
 Often times you collect and store raw data, and that raw data is in original form like csv, json etc.<br>
 Then you often times would like to take that raw data and create curated datasets - query optimized datasets to be able to very rapidly access that data. <br>
 This could be through ML, Data warehousing etc.<br> 
@@ -504,13 +517,13 @@ We will discuss about temperature across those spectrums.<br></p>
       
       
         
-        <a href="../Big-data-architectural-patterns-3/" class="md-footer__link md-footer__link--next" aria-label="Next: Collect Layer" rel="next">
+        <a href="../Big-data-architectural-patterns-3/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Collection Layer" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Collect Layer
+              Data Collection Layer
             </div>
           </div>
           <div class="md-footer__button md-icon">

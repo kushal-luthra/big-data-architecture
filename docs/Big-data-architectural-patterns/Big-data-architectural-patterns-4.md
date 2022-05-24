@@ -1,11 +1,16 @@
 ## Data Processing Layer
 ![img_16.png](images/img_16.png)<br>
 
+We will highlight various available services in AWS and their use cases.<br>
+
 ### Interactive & Batch Analytics
-Lets look at interactive & batch analytics. <br>
+First, let's look at interactive & batch analytics. <br>
 ![img.png](images/img_17.png) <br>
- 
-- Elastic Search - useful for Log data Text Search capabilities. <br>
+
+**Elastic Search** 
+  - Elastic Search clusters can be spun up in minutes.<br>
+  - Strongest use case is Log Analysis, wherein you have dashboard based on ELK (elastic search & Kibana) stack. <br>
+  - Other use case is in datalake is metadata indexing. Since Elastic Search is a search, it will allow you query with some search - give search experience your queries. You could index your metadata to elastic search, and have an additional search ability over your data sources in a datalake. <br>
 - Redshift & Redshift Spectrum - for data warehousing needs. <br>
 - Athena ~ Hive - perform SQL based queries on Data that resides on S3. <br>
   - S3 Select - is somewhat similar to Athena, but there are some differences. <br>
