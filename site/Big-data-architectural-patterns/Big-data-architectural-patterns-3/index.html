@@ -555,11 +555,32 @@ For example, say you to do some analysis on data that involves iterative reads, 
 <p>Now, lets talk about databases.<br>
 <img alt="img_11.png" src="../images/img_11.png" /><br>
 When it comes to databases, we have large number of options based on purpose.<br></p>
-<p>|Purpose|Database |
-|caching|AWS elasticCache, DynamoDB Accelerator|
-|Graph DB | Amazon Neptune|
-|Key-value document| Amazon DynamoDB|
-|SQL/RDBMS|Amazon RDS (Relational Database Service)|</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Database</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Caching</td>
+<td>- AWS elasticCache <br/>- DynamoDB Accelerator</td>
+</tr>
+<tr>
+<td>Graph DB</td>
+<td>Amazon Neptune</td>
+</tr>
+<tr>
+<td>Key-Value document</td>
+<td>Amazon DynamoDB</td>
+</tr>
+<tr>
+<td>SQL/RDBMS</td>
+<td>Amazon RDS (Relational Database Service)</td>
+</tr>
+</tbody>
+</table>
 <p>Amazon DynamoDB Accelerator (DAX) - its a dynamoDB Front end which has a write-through cache.<br></p>
 <h3 id="which-store-should-i-use">Which Store should I use?</h3>
 <p><img alt="img_12.png" src="../images/img_12.png" /><br></p>
