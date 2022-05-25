@@ -23,13 +23,8 @@ For Transactional data, it usually goes into NoSQL or relational database.<br>
 (we will discuss the criteria for this).<br>
 For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object store for which datalake based on HDFS/S3 is needed.<br>
 
-#### Stream Storage 
-For stream storage, we have 4 main options (1 open source & 3 in AWS) -><br>
-**Apache Kafka <br>**
-    - open source project.<br>
-    - well established.<br>
-    - High throughput distributed streaming platform.<br>
-    - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br>
+#### Stream Storage
+For stream storage, we have 3 main options in AWS -><br>
   
 **Amazon Kinesis Data Streaming**
   - Managed **Stream storage**<br>
@@ -51,6 +46,12 @@ For stream storage, we have 4 main options (1 open source & 3 in AWS) -><br>
 **Amazon Managed Streaming for Apache Kafka (Amazon MSK)**
 - This is Amazon managed Kafka service, wherein you can setup kafka cluster with a few clicks.
 - Here AWS manages Kafka cluster, including Zookeeper.
+
+In open source we have **Apache Kafka** <br>
+    - open source project.<br>
+    - well established.<br>
+    - High throughput distributed streaming platform.<br>
+    - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br>
 
 ### Which Streaming/Message Storage should I use?
 ![img_7.png](images/img_7.png)<br>

@@ -391,20 +391,22 @@
 
 <h2 id="data-processing-layer">Data Processing Layer</h2>
 <p><img alt="img_16.png" src="../images/img_16.png" /><br></p>
+<p>We will highlight various available services in AWS and their use cases.<br></p>
 <h3 id="interactive-batch-analytics">Interactive &amp; Batch Analytics</h3>
-<p>Lets look at interactive &amp; batch analytics. <br>
+<p>First, let's look at interactive &amp; batch analytics. <br>
 <img alt="img.png" src="../images/img_17.png" /> <br></p>
-<ul>
-<li>Elastic Search - useful for Log data Text Search capabilities. <br></li>
-<li>Redshift &amp; Redshift Spectrum - for data warehousing needs. <br></li>
-<li>Athena ~ Hive - perform SQL based queries on Data that resides on S3. <br></li>
-<li>S3 Select - is somewhat similar to Athena, but there are some differences. <br></li>
-<li>You can think about AWS S3 Select as a cost-efficient storage optimization that allows retrieving data that matches the predicate in S3 and glacier aka push down filtering. <br> </li>
-<li>AWS Athena is fully managed analytical service that allows running arbitrary ANSI SQL compliant queries - group by, having, window and geo functions, SQL DDL and DML. <br></li>
-<li>EMR - Its Hadoop &amp; Spark as a service that lets you run various platform applications. <br></li>
-<li>one thing special about EMR is that you have root access to EC2 instances that EMR is using unlike other managed services. <br>
-    eg - in RDS, you ENIN point that allows you to perform database functions, but you cannot do SSH on it. <br></li>
-</ul>
+<p><strong>Elastic Search</strong> 
+  - Elastic Search clusters can be spun up in minutes.<br>
+  - Strongest use case is Log Analysis, wherein you have dashboard based on ELK (elastic search &amp; Kibana) stack. <br>
+  - Other use case is in datalake is metadata indexing. Since Elastic Search is a search, it will allow you query with some search - give search experience your queries. You could index your metadata to elastic search, and have an additional search ability over your data sources in a datalake. <br>
+- Redshift &amp; Redshift Spectrum - for data warehousing needs. <br>
+- Athena ~ Hive - perform SQL based queries on Data that resides on S3. <br>
+  - S3 Select - is somewhat similar to Athena, but there are some differences. <br>
+  - You can think about AWS S3 Select as a cost-efficient storage optimization that allows retrieving data that matches the predicate in S3 and glacier aka push down filtering. <br> 
+  - AWS Athena is fully managed analytical service that allows running arbitrary ANSI SQL compliant queries - group by, having, window and geo functions, SQL DDL and DML. <br>
+- EMR - Its Hadoop &amp; Spark as a service that lets you run various platform applications. <br>
+  - one thing special about EMR is that you have root access to EC2 instances that EMR is using unlike other managed services. <br>
+    eg - in RDS, you ENIN point that allows you to perform database functions, but you cannot do SSH on it. <br></p>
 <h3 id="streamingreal-time-analytics">Streaming/Real-time Analytics</h3>
 <p><img alt="img_1.png" src="../images/img_18.png" /> <br>
 If you look at Hadoop ecosystem, the number of services that perform real-time analytics has been growing - Spark Streaming, Flink, Storm.  <br>

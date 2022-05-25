@@ -23,9 +23,9 @@ This means users can focus on core use case instead of being caught up in acquir
 
 ### Big Data Challenges
 Lets start with the challenge first.
-As a customer, one would like to have answers to questions like ->
-* Is there a reference architecture for my use case?<br>
-* If yes, what tools should one choose?<br>
-* How?<br>
-* Why?<br><br>
+As a customer, one would like to have answers to questions like -><br>
+- Is there a reference architecture for my use case?<br>
+- If yes, what tools should one choose?<br>
+- How?<br>
+- Why?<br><br>
 ![img_2.png](images/img_2.png)<br>

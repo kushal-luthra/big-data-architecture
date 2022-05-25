@@ -30,8 +30,8 @@ Why - if you have large volume of data, and if there is ever an issue like -> <b
    i. your job has a bug, Or <br>
    ii. you accidently delete your data,
  ...you have the option to replay history and regenerate your data. <br>
- So, go for immutable datasets (data lake), materialized views. <br><br>
-When you want to build analytical systems, use immutable datasets (i.e. Data lake) where you want to capture State of an application in order to load as materialized views. <br>
+ So, go for immutable datasets (data lake), materialized views. <br>
+When you want to build analytical systems, use immutable datasets (i.e. Data lake) where you want to capture State of an application in order to load as materialized views. <br><br>
 
 5. Be cost-conscious <br>
 Lot of times, big data doesnt have to mean big cost. <br>
@@ -57,8 +57,6 @@ Often times you collect and store raw data, and that raw data is in original for
 Then you often times would like to take that raw data and create curated datasets - query optimized datasets to be able to very rapidly access that data. <br>
 This could be through ML, Data warehousing etc.<br> 
 This is a iterative process wherein you take raw data, and pass it through various transformations processes, and convert it to normalized/de-normalized form in order for it to be consumed by different stakeholders.<br>
-
-
 
 ## What is the temperature of my data?
 ![img_5.png](images/img_5.png)
