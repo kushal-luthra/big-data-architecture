@@ -17,7 +17,7 @@
     
     
       
-        <title>Data Collection Layer - Big Data System Design</title>
+        <title>Data Collection Layer - Big Data Architecture Patterns</title>
       
     
     
@@ -77,7 +77,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Big Data System Design" class="md-header__button md-logo" aria-label="Big Data System Design" data-md-component="logo">
+    <a href="../.." title="Big Data Architecture Patterns" class="md-header__button md-logo" aria-label="Big Data Architecture Patterns" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -90,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Big Data System Design
+            Big Data Architecture Patterns
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -175,13 +175,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Big Data System Design" class="md-nav__button md-logo" aria-label="Big Data System Design" data-md-component="logo">
+    <a href="../.." title="Big Data Architecture Patterns" class="md-nav__button md-logo" aria-label="Big Data Architecture Patterns" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Big Data System Design
+    Big Data Architecture Patterns
   </label>
   
     <div class="md-nav__source">
@@ -403,6 +403,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Big-data-architectural-patterns-4/" class="md-nav__link">
+        Data Processing Layer
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -576,12 +590,7 @@ For Transactional data, it usually goes into NoSQL or relational database.<br>
 (we will discuss the criteria for this).<br>
 For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object store for which datalake based on HDFS/S3 is needed.<br></p>
 <h4 id="stream-storage">Stream Storage</h4>
-<p>For stream storage, we have 4 main options (1 open source &amp; 3 in AWS) -&gt;<br>
-<strong>Apache Kafka <br></strong>
-    - open source project.<br>
-    - well established.<br>
-    - High throughput distributed streaming platform.<br>
-    - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br></p>
+<p>For stream storage, we have 3 main options in AWS -&gt;<br></p>
 <p><strong>Amazon Kinesis Data Streaming</strong>
   - Managed <strong>Stream storage</strong><br>
   - for example, here we define number of shards, and each shard processes a 1000 records/seconds.<br> 
@@ -600,6 +609,11 @@ For Files/Objects data, the defacto standard is HDFS/S3 - we need a big object s
 <p><strong>Amazon Managed Streaming for Apache Kafka (Amazon MSK)</strong>
 - This is Amazon managed Kafka service, wherein you can setup kafka cluster with a few clicks.
 - Here AWS manages Kafka cluster, including Zookeeper.</p>
+<p>In open source we have <strong>Apache Kafka</strong> <br>
+    - open source project.<br>
+    - well established.<br>
+    - High throughput distributed streaming platform.<br>
+    - so a client which wants to migrate their data can begin by moving over their kafka systems to ec2.<br></p>
 <h3 id="which-streamingmessage-storage-should-i-use">Which Streaming/Message Storage should I use?</h3>
 <p><img alt="img_7.png" src="../images/img_7.png" /><br></p>
 <p>SQS (Simple Queue Service) Vs Streaming Storage -&gt;<br>
@@ -751,13 +765,13 @@ eg- <br>
       
       
         
-        <a href="../../aboutme/" class="md-footer__link md-footer__link--next" aria-label="Next: About Me" rel="next">
+        <a href="../Big-data-architectural-patterns-4/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Processing Layer" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              About Me
+              Data Processing Layer
             </div>
           </div>
           <div class="md-footer__button md-icon">
