@@ -2,4 +2,5 @@
 
 [![CI](https://github.com/kushal-luthra/big-data-architecture/blob/main/.github/workflows/CI/badge.svg)](https://github.com/kushal-luthra/big-data-architecture/actions)
 
-Link : https://kushal-luthra.github.io/big-data-architecture/ <br>
+
+The project contains the sources of [Big Data Architecture Patterns](https://kushal-luthra.github.io/big-data-architecture/) online book.
