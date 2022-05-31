@@ -7,14 +7,13 @@
 ![](images/Front_page.jpeg)
 
 ## Topics
-Content <br>
-- Introduction <br><br>
-- Big Data Architectural Principles<br>
-   - A simplified data processing pipeline.<br>
-   - What is the temperature of my data?<br><br>
-- Collect Layer<br>
-   - Types of data sources<br>
-   - Which Streaming/Message Storage should I use?<br>
-   - Which File/Object Storage should I use?<br>
-   - Data Tiering<br><br>
-- Processing Layer<br><br>
+Big data Architectural Patterns <br>
+- [Introduction](Big-data-architectural-patterns/Big-data-architectural-patterns-1.md) <br>
+- [Big Data Architectural Principles](Big-data-architectural-patterns/Big-data-architectural-patterns-2.md) <br>
+- [Data Collection Layer](Big-data-architectural-patterns/Big-data-architectural-patterns-3.md) <br>
+- [Data Processing Layer](Big-data-architectural-patterns/Big-data-architectural-patterns-4.md) <br><br>
+
+Storage Layer <br>
+- [Row-based Vs Column-based File Formats](Storage Layer Choices/row based and column based file formats.md) <br>
+- [Text-based File Formats](Storage Layer Choices/Text File Formats.md) <br>
+- [Big Data File Formats](Storage Layer Choices/big data file formats.md) <br>

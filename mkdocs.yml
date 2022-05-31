@@ -19,6 +19,10 @@ nav:
       - Big Data Architectural Principles : Big-data-architectural-patterns/Big-data-architectural-patterns-2.md
       - Data Collection Layer : Big-data-architectural-patterns/Big-data-architectural-patterns-3.md
       - Data Processing Layer : Big-data-architectural-patterns/Big-data-architectural-patterns-4.md
+  - Storage Layer:
+      - Row-based Vs Column-based File Formats : Storage Layer Choices/row based and column based file formats.md
+      - Text-based File Formats : Storage Layer Choices/Text File Formats.md
+      - Big Data File Formats : Storage Layer Choices/big data file formats.md
   - About Me: aboutme.md
 
 extra:

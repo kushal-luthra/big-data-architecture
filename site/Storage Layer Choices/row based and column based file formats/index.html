@@ -17,7 +17,7 @@
     
     
       
-        <title>Big Data Architectural Principles - Big Data Architecture Patterns</title>
+        <title>Row-based Vs Column-based File Formats - Big Data Architecture Patterns</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#big-data-architectural-principles" class="md-skip">
+        <a href="#row-vs-column-file-format" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Big Data Architectural Principles
+              Row-based Vs Column-based File Formats
             
           </span>
         </div>
@@ -219,14 +219,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -249,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Big-data-architectural-patterns-1/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -261,62 +259,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Big Data Architectural Principles
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-2/" class="md-nav__link">
         Big Data Architectural Principles
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#big-data-architectural-principles" class="md-nav__link">
-    Big Data Architectural Principles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-simplified-data-processing-pipeline" class="md-nav__link">
-    A simplified data processing pipeline
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-temperature-of-my-data" class="md-nav__link">
-    What is the temperature of my data?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -328,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Big-data-architectural-patterns-3/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-3/" class="md-nav__link">
         Data Collection Layer
       </a>
     </li>
@@ -342,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Big-data-architectural-patterns-4/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-4/" class="md-nav__link">
         Data Processing Layer
       </a>
     </li>
@@ -362,12 +309,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -388,11 +337,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Storage%20Layer%20Choices/row%20based%20and%20column%20based%20file%20formats/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Row-based Vs Column-based File Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Row-based Vs Column-based File Formats
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#row-vs-column-file-format" class="md-nav__link">
+    Row Vs Column File Format
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -404,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Storage%20Layer%20Choices/Text%20File%20Formats/" class="md-nav__link">
+      <a href="../Text%20File%20Formats/" class="md-nav__link">
         Text-based File Formats
       </a>
     </li>
@@ -418,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Storage%20Layer%20Choices/big%20data%20file%20formats/" class="md-nav__link">
+      <a href="../big%20data%20file%20formats/" class="md-nav__link">
         Big Data File Formats
       </a>
     </li>
@@ -472,22 +458,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#big-data-architectural-principles" class="md-nav__link">
-    Big Data Architectural Principles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-simplified-data-processing-pipeline" class="md-nav__link">
-    A simplified data processing pipeline
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-temperature-of-my-data" class="md-nav__link">
-    What is the temperature of my data?
+  <a href="#row-vs-column-file-format" class="md-nav__link">
+    Row Vs Column File Format
   </a>
   
 </li>
@@ -504,80 +476,85 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/Big-data-architectural-patterns/Big-data-architectural-patterns-2.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/Storage Layer Choices/row based and column based file formats.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Big Data Architectural Principles</h1>
+  <h1>Row-based Vs Column-based File Formats</h1>
 
-<h2 id="big-data-architectural-principles">Big Data Architectural Principles</h2>
-<p>Before we discuss the answer to Big Data Challenges, lets discuss the key architectural principles.<br></p>
-<p><img alt="img_3.png" src="../images/img_3.png" /><br></p>
-<ol>
-<li>
-<p>Build loosely coupled or decoupled system. <br>
-This holds true not just for Big Data Systems, but for any system. <br>
-As there is separation of concerns, it allows you to iterate over each and every sub-system, and so you could truly build and eveolve over time. <br> 
-This makes you <strong>future-proof</strong>. <br><br>
-This means - the way I collect my data shouldn't be dependent on the way I analyze my data. <br>
-So, I could change the way I collect my data by changing the tool and it shouldn't be impacting the way I store, process and/or analyze my data. <br></p>
-</li>
-<li>
-<p>Being able to pick right tool for the right Job. <br>
-If your system is loosely coupled, it gives you flexibility to pick right tool for right Job. <br>
-Rather than trying to pick one tool to do everything, choose one which fits your use case. <br>
-Eg-  <br>
-   a. for streaming you an use Kafka, AWS Kineses <br>
-   b. for ML - sagemaker <br>
-   c. for storage - RDS, HDFS/S3 etc <br><br></p>
-</li>
-<li>
-<p>Leverage managed and serverless services - <br>
-Not an architectural principle, but more of a recommendation. <br>
-By leveraging managed and serverless services, you can focus on what really matters. <br>
-It lets you focus on analytics, the transformations, the ETL, rather than loading softwares, ensure their upgrade. etc. This is all handled by vendor behind the scenes. <br><br></p>
-</li>
-<li>
-<p>Use event-journaling design Patterns - <br>
-It means as you are collecting data into big data systems its a good practice to not override your data. <br>
-So, if you are getting data records, and some of those data records are getting corrected, then rather than correcting those records, keep appending to your dataset. <br>
-Why - if you have large volume of data, and if there is ever an issue like -&gt; <br>
-   i. your job has a bug, Or <br>
-   ii. you accidently delete your data,
- ...you have the option to replay history and regenerate your data. <br>
- So, go for immutable datasets (data lake), materialized views. <br>
-When you want to build analytical systems, use immutable datasets (i.e. Data lake) where you want to capture State of an application in order to load as materialized views. <br><br></p>
-</li>
-<li>
-<p>Be cost-conscious <br>
-Lot of times, big data doesnt have to mean big cost. <br>
-If you architect it correctly, say you are building a hadoop system and are decoupling storage and processing layers, you can build a very cost effective, performant system, and keep the cost down. <br><br></p>
-</li>
-<li>
-<p>Use ML to enable you applications. <br>
-This is a growing trend wherein more and more companies are leveraging ML to build their competitive advantages. <br></p>
-</li>
-</ol>
-<h2 id="a-simplified-data-processing-pipeline">A simplified data processing pipeline</h2>
-<p>Below, we see simplified data processing pipeline.<br><br>
-<img alt="img_4.png" src="../images/img_4.png" /><br></p>
-<p>Your exact use case may not match it, but you should look at logical constructs here.<br></p>
-<p>for example, in  Collect layer, you need to ask questions like -&gt;<br>
-- How am I gonna capture and collect this information?<br>
-- If I have different datasets, I may not be collecting and storing these datasets in the same way.<br>
-- If I have GPS data or clickstream data, I would like to collect it differently from imagery or satellite data.<br></p>
-<p>You must also note there is a cycle here.<br>
-It's not exactly a waterfall model. <br>
-Often times you collect and store raw data, and that raw data is in original form like csv, json etc.<br>
-Then you often times would like to take that raw data and create curated datasets - query optimized datasets to be able to very rapidly access that data. <br>
-This could be through ML, Data warehousing etc.<br> 
-This is a iterative process wherein you take raw data, and pass it through various transformations processes, and convert it to normalized/de-normalized form in order for it to be consumed by different stakeholders.<br></p>
-<h2 id="what-is-the-temperature-of-my-data">What is the temperature of my data?</h2>
-<p><img alt="img_5.png" src="../images/img_5.png" /></p>
-<p>Often times we talk about temperature of your data, that means velocity of your data, your queries and your analytics.<br>
-We will discuss about temperature across those spectrums.<br></p>
+<h2 id="row-vs-column-file-format">Row Vs Column File Format</h2>
+<p>When you are designing big data solution, one fundamental que is – “how data will be stored”
+It involves taking into consideration 2 things –
+•   File formats
+•   Compression techniques</p>
+<p>Why do we need different File Formats?
+•   To save storage
+•   To do fast processing 
+•   To have less time in I/O operations – since we are dealing in big data, I/O operations are a big bottleneck, and so spending as less time in this area as possible.</p>
+<p>Our file formats help us in all 3 above if we go with right file format.</p>
+<p>There are a lot of choices available on file formats. 
+Below are key aspects for deciding a file format - 
+1.  Faster reads.
+2.  Faster writes.
+3.  Splittable - Some are designed in such a way that they are splittable – if a file is splittable, we can do parallel processing – in big data solutions, we consider only splittable file formats.
+4.  Schema evolution support – some of the file formats support schema evolution -  i.e. to facilitate change in input data by allowing schema changes.
+5.  Advanced compression techniques
+6.  Most compatible platform - some work well with hive, some with spark, etc</p>
+<p>All the file formats have been divided into 2 broad categories –
+•   Row based
+•   Column based</p>
+<p>Row based –
+Here data is stored row-by-row.
+<img alt="img.png" src="../images/img.png" /></p>
+<p>At a time, whole record is saved. If a new record comes, it gets appended at the end.
+So, writing a record is very easy coz you simply append at the end.</p>
+<p>Now let’s talk about reading – 
+While write is easy, but in order to get subset of columns, it has to read entire record. That is, performance is degraded when it comes to read.
+In data warehousing, wherein we scan specific set of records, row-based formats is not suggested.</p>
+<p>Regarding Compression of row-based file–
+Since data is stored record by record, so different data types are present together, next to each other.
+That means, compression is not as efficient as it could be.</p>
+<p>Column based file format –
+All column values are stored together.
+<img alt="img_1.png" src="../images/img_1.png" /></p>
+<p>For Reading data in column-based file format – it allows us to skip data and read only relevant columns.
+Column based file format is suggested for data warehouse based query system.</p>
+<p>For write on column-based file, it is time consuming as you need to write on multiple places.</p>
+<p>Regarding Compression of column-based file–
+Since data is stored column by column, so same data types are present together, next to each other.
+That means, compression can be applied efficiently for each data type.
+<img alt="img_2.png" src="../images/img_2.png" /></p>
+<p>To summarize –
+If you write once but read multiple times, go for column-based file format.
+If you read once, but write multiple times, go for row-based file format.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>row based</th>
+<th>column based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>read</td>
+<td>slower reads</td>
+<td>faster reads</td>
+</tr>
+<tr>
+<td>writes</td>
+<td>faster writes</td>
+<td>slower writes</td>
+</tr>
+<tr>
+<td>compression</td>
+<td>poor</td>
+<td>good</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
@@ -591,7 +568,7 @@ We will discuss about temperature across those spectrums.<br></p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Big-data-architectural-patterns-1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+        <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Processing Layer" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -600,20 +577,20 @@ We will discuss about temperature across those spectrums.<br></p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Introduction
+              Data Processing Layer
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Big-data-architectural-patterns-3/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Collection Layer" rel="next">
+        <a href="../Text%20File%20Formats/" class="md-footer__link md-footer__link--next" aria-label="Next: Text-based File Formats" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Data Collection Layer
+              Text-based File Formats
             </div>
           </div>
           <div class="md-footer__button md-icon">
