@@ -1,8 +1,8 @@
 # Data Consumption Process
 
-![img.png](img.png)
+![img.png](images/img_26.png)
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_27.png)
 
 
 When it comes to consumption, we have 2 categories of users -
