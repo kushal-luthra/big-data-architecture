@@ -1,7 +1,7 @@
 # Design Patterns
 
 ## What is the temperature of my Data?
-![img.png](img.png)
+![img.png](images/img_29.png)
 
 As we talk about design patterns, it takes us back to our original question - **'What is the temperature of my Data?'** <br>
 Moving from left-hand side, we have Kinesis, Databases, Transactional databases and all the way to Data lakes & Cold storages. <br>
@@ -20,135 +20,100 @@ For **Interactive Analytics**, it is done using multiple data sources - streamin
 For **Batch Analytics**, where response time is highest, you can use Hive or AWS Batch technologies. <br><br>
 
 ## Streaming Analytics
-![img_2.png](img_2.png)
+![img_2.png](images/img_31.png)
 
-For Streaming data, very often you would want to do real-time analytics on that data, for which you could use Amazon Kinesis Data Analytics.
-Other options could be -
-- Amazon Lambda - to read your Stream.
-- KCL App
-- Micro batching - using spark streaming on Amazon EMR.
+For Streaming data, very often you would want to do **real-time analytics** on that data, for which you could use **Amazon Kinesis Data Analytics**. <br>
+Other options could be - <br>
+- Amazon Lambda - to read your Stream. <br>
+- KCL App <br>
+- Micro batching - using spark streaming on Amazon EMR. <br>
 
-Further, as you process the stream, you could do ML by utilizing end-points that are already available as part of Amazon AI ecosystem like Sagemaker.
-Likewise, you could do Fraud Alerts and send notification to users using Amazon SNS.
+Further, as you process the stream, you could do **real time predictive analytics** on your data (i.e. ML) by utilizing end-points that are already available as part of Amazon AI ecosystem like **Sagemaker**, which allows you to build these models, and have an end point that these services could call. <br>
+Likewise, you could do Fraud Alerts and send notification to users using **Amazon SNS**. <br>
 
-You can store data to S3 for doing analytics later on.
+You can store data to **S3** for **doing analytics later* on. <br>
 
+If you want to also capture the data to have **real-time dashboard** or feed a dashboard, then it is a good practise to export like an **App State or Materialized View** and have another system that could be a database, like **DynamoDb** kind of system, and KPI dashboard being setup in front of streaming data. <br>
+App Store is based on **cache**, including Memcache, Redis or Amazon ElasticCache. <br>
+ <br>
 
-A stream typically arrives to Amazon Kinesis Data Streams, and you usually have Amazon Kinesis Data Analytics to do real-time analytics. Other options could be -
-- Amazon Lambda - to read your Stream.
-- KCL App
-- Micro batching - using spark streaming on Amazon EMR.
+### Example - Hearst's Serverless Data Pipeline
 
-Further, as you process the stream, you could do ML by utilizing end-points that are already available as part of Amazon AI ecosystem like Sagemaker.
+![img_3.png](images/img_33.png) <br>
 
-Likewise, you could do Fraud Alerts and send notification to users using Amazon SNS.
+**Hearst** is a media and information company, and they have wide number of different channels - magazine, newspapers, media channels like ESPN, etc. under their umbrella. <br>
+And so they have various kinds of information coming from different websites, and going into **Amazon Kinesis Data Streams**. <br>
+Once it hits the data streams, and since it is a stream, so you could have **multiple consumers** - 
+- one of those consumers coud store my data back into a datalake or data repository. <br>
+- another consumer could build real-time dashboard or build a real-time analysis of that data. <br>
 
-You can store data to S3 for doing analytics later on.
-
-If you want to just capture the data to have real-time dashboard or feed a dashboard, then it is a good practise to export like an app state or Materialized View and have another system that could be a database, like DynamoDb kind of system, and KPI dashboard being setup in front of streaming data.
-
-
-old
-For data that is streaming, very often you would want to do real-time analytics on that data, for which you could use kinesis data analytics.
-You could use KCL App, Lambda or EMR for spark streaming. 
-
-From tehre you would want to do tasks like real time predictive analytics on your data, for which you could use Sagemaker endpoints, which allows you to build these models, and have an end point that these services could cal, and once you call taht end ppint and if that its outside certain threshold, you could actually alert based on certain notification service like Amazon SNS.
-you could send that data to S3, and/or create materialze views or app states, and this is an area where you would want to create KPI perforance indicators, and this app state is one of the core architectural components which is used - caching use amazon elastic case or redis or mecache, or maybe dynamo.
+This is what they are doing. <br>
+Their data is flowing to Firehose which is used to capture Streaming events and delivering them into S3 for further analytics later on. <br>
+Another consumer is going through lambda pipeline, pulling data from the stream, doing analytics and push the results of analysis into DynamoDb. 
+- In DynamoDb, we store that app state or store that analysis state which is exposed through an API Gateway, that allows you to have a REST-Ful endpoint, defined through swagger to get the current state of data. <br>
 
 
+### Example 2 - Yieldmo's data ingestion and real-time analytics architecture
 
-Sample example - Hearst's Serverless Data Pipeline
-![img_3.png](img_3.png)
+![img_7.png](images/img_37.png) <br>
 
-Hearst is a media and information company, and among other things,, they are managing websites for those magazine,es and are using kinesis data treams. As a use case, you can have multiple consumers from the same stream.
-So, with kinesis data stream, one stream route is using lanbda for pulling data from teh stream, doing analuytics and push the reuslt of analysis into DynamoDb.
-Thsoe tables exposed from an API to drive dashboard.
-But otehr route, is kinesis data firehose to capture Streaming events and delivering them into S3 for further analytics later one.
-
-
-old
-Hearst is a media and information company, and they have wide number of different channels - magazine, newspapers, media channels like ESPN, etc under their umbrella.
-And so they have various infromation coming from different websites, and going into kinesis data streams.
-Once it hits data streams, and since it is a stream so you could have multiple consumers - 
-    one of those consumers coud store my data back into a datalake or data reprosutory.
-    another consumer could build real-time dashboard or build a real-time analysis of that data.
-This is what they are donig.
-Their data is flowing to Firehose which is storing data to S3.
-Another consumer is going through lambda pipeline, hitting DynamoDb to be able to store that app state or store that analysis state which is exposed through an API Gateway which allows you to have a RESTFul endpoint, defined through swagger to get the current state of data.
+They have 1000s of mobile devices whose data is passed through kinesis data streams.
+On it, they are running kinesis data analytics. <br>
+In Hearst, they used lambda - wherein their developers wrote function codes to be able to process the real-time data in order to store it into DynamoDb tables. <br>
+In Yieldmo, customer is writing SQL to be able to run same sort of processing on real-time feeds, and then do aggregation and filtering on that data, and store it into data warehouse using Firehose and S3 channel. <br>
 
 
-Eg 2 - Yieldmo's data ingestion and real-time analytics architecture
-![img_7.png](img_7.png)
+## Interactive & Batch Analytics
+![img_8.png](images/img_38.png)<br>
 
-They have 1000s of mibile devices whose data is passed through kinesis data streams.
-On it, they are running kinesis data analytics.
-in Hearst, they used lambda - wherein their developers wrote function codes to be able to process the real-time data in order to store it inot dynamoDb table.
-In Yieldmo, customer is writing SQL to be able to run same sort of processing on real-time feeds, and then do aggregation and filtering on taht data, and store it into data warehosueing using Firehose and S3 channel.
+In above diagram, Top layer is Interactive Analytics and Bottom layer is Batch analytics. <br>
 
 
-## Interactuive & Batch Analytics
-![img_4.png](img_4.png)
-
-![img_8.png](img_8.png)
-
-
-Here also we start with teh stream.
-The fact taht you might do interatuve and batch analytics doesnt mean you dont have streaming data. So you have streaming data, and you use Kinesis Firehose to caopture them into S3.
-But you also might have files that you would want to deliver directly to S3.
-From kinesis data firhose, its a deliverys tream - htink of it as a pipe that delivers. So, the supported target, apart from S3, is also redshift for data warehousing or elastic search to do Kibana dahsboarding based analysis.
-To do interactive analytics over S3, a great tool is Athena. But also running EMR cluster with Presto and spark for Interactive Analytics
-For Batch analytcis, here 2 main tools are - EMR and Glue jobs.
-With EMR, 2 main frameworks are Spark and Hive.
-
-In above diagram, Top layer is Interactive Analytics and Bottom layer is Batch analyutics.
-
-old -
-In batch and interactive analytics, you still might have streaming data coming in.
-For example, if you have ClickStream data, you might want to start analyzing data interactively like What certain users are doing, what different profile of users I have>?
-We also might have different data sources coming in S3 through wide variety of methods - Snowball, S3 accelerate transfer, integrating data from different departments in the company, etc.
-As soon as Streaming data flows in, it gets pushed into S3, and simultaneously gets loaded into redshift or elasticsearch.
-For processing you could use Athena or EMR.
-For Batch processing, we earlier used Hive and Pig, and now SPark is being used.
+Interactive & Batch pipeline will have data with different latencies - <br>
+- Streaming data - The fact that you might do interactive and batch analytics doesn't mean you don't have streaming data. So you have streaming data, and you use Kinesis Firehose to capture them into S3. <br> For example, if you have ClickStream data, you might want to start analyzing data interactively like What certain users are doing, what different profile of users I have? <br> As soon as Streaming data flows in, it gets pushed into S3, and simultaneously gets loaded into Redshift for data warehousing or Elastic Search to do Kibana dash-boarding based analysis. <br> For processing such data over S3, you could use Athena or EMR with Spark/Presto. <br>
+- Batch data - you also might have files that you would want to deliver directly to S3. <br> This data would be coming from different data sources coming into S3 through wide variety of methods - Snowball, S3 accelerate transfer, integrating data from different departments in the company, etc. <br> For Batch analytics, here 2 main tools are - EMR and Glue jobs. <br> For Batch processing in EMR, we earlier used Hive and Pig, and now Spark is being used. <br>
 
 
-Eg- FINRA : Miograting to AWS
-![img_5.png](img_5.png)
+### Example -  FINRA : Migrating to AWS
+![img_5.png](images/img_35.png)
 
-FINRA is the financial regulatry auhoruty in USA, and is using AWS for lot of analyutics.
-They are ingesting over 75 billions of records on daily basis.
-Data is coming from various sources into S3.
-From S3, they have multiple systems doing analytics, abd this is back to where we say, you can have multiple clusters doing analytics, and these clsuters would be specific to workload you want to support.
-For example - 
-- redshift - pred-defined queries.
-- multuople EMR clusters to perform interactive analytcis and Surveillance analytics for detecting fraud.
+FINRA is the financial regulatory authority of USA. <br>
+It ingests 75 billion events per day, which this includes - Stock information, Financial Trade information, and what they are really looking is find things like Market Manipulators, and other anomalous behaviour on the stock market. <br>
 
-FINRA has strict security requirements, and are utilizing things like VPC. Redshift and EMR can be hosted into VPC.
-They also use encryption at rest and in transit in S3.
-they are also using Cloud Trail, which is for audit purposes. Cloud Trail captures every single API call into AWS, and you can have an audit trail for any action that happens on your infrastructure.
+Data is coming from various sources into S3.  <br>
+- All this data flows into S3.
+- They have **canonical data issue** - different brokerage report data in different formats. It goes in the raw form into canonical form and using wide number of EMR & redshift clusters to process data.
 
-old -
-FINRA ingests 75 billion events per daya, wherein this includes - Stock information, Financial Trade information, and what they are really looking is find things like Market Manipulators, and other anomalous behaviour on the stock market.
-All this data flows into S3.
-They have canonical data issue - different brokerage report data in different formats. It goes in the raw form into canonical form and using wide number of EMR & redshift clusters to process data.
+From S3, they have multiple systems doing analytics, and this is back to where we say, you can have multiple clusters doing analytics, and these clusters would be specific to workload you want to support. 
+For example -  <br>
+- redshift - pre-defined queries.
+- multiple EMR clusters to perform interactive analytics and Surveillance analytics for detecting fraud.
+
 This shows the flexibility in your architecture - wherein you are storing data in format which is easily consumable by -
-- multiple types or same service like mEMR
+- multiple types or same service like EMR
 - data warehouse
 - data lake analytics by your ML.
-
+ 
+FINRA has **strict security requirements**, and are utilizing things like VPC.  <br>
+**Redshift and EMR** can be hosted into VPC. <br>
+They also use **encryption** at rest and in transit in S3. <br>
+They are also using **Cloud Trail**, which is for audit purposes. Cloud Trail captures every single API call into AWS, and you can have an audit trail for any action that happens on your infrastructure. <br>
 
 
 ## Datalake
-![img_6.png](img_6.png) <br>
+![img_6.png](images/img_36.png) <br>
 
-Final pattern in our reference architecture is 'Datalake'.
-Here Amazon S3, along with Glue Catalog, together are playing central role.
-There are multiple ways ot put data into S3.
-if you have relational databases, and you want to have CDC, Database migration servcie is a great way.Other way is with Glue ETL jobs top put data into S3.
-For streaming data arriving, Amazon Firehose is a great way - you can use Kinesis data analuytics to do data analytcis and them put them back to Stream, and thenput them bakc to S3.
-From Amazon s3, you can use lambdas or spraarl streaming or KCL appliacations to do a realtime analytics, and then load data into some sort of application state or materialized view so taht you drive dashboard or you can have batch or interactive layer above your data lake so that you can explore data in data lake.
-Servcie as for batch and interactive analutcs here are - redhsift, athena, EMR, presto.
 
-Old -
-When you are building a data lake, its about tying in interactive and batch processing, wherein S3 is centre of lake.
-Another important aspect of datalake is metadata management -AWS Glue Catalog, which serves as common metadat store.
 
+
+Final pattern in our reference architecture is 'Datalake'. <br>
+Here Amazon S3, along with Glue Catalog, together are playing central role. <br>
+- When you are building a data lake, its about tying in interactive and batch processing, wherein S3 is centre of lake.
+- Another important aspect of datalake is metadata management -AWS Glue Catalog, which serves as common metadata store.
+
+There are multiple ways to put data into S3. <br>
+- If you have Relational Databases, and you want to have CDC, Database Migration Service is a great way.  <br> Other way is with Glue ETL jobs top put data into S3. <br>
+- For Streaming Data arriving, Amazon Firehose is a great way - you can use Kinesis data analytics to do data analytics and them put them back to Stream, and then put them back to S3. <br>
+- From Amazon S3, you can use lambda or spark streaming or KCL applications to do a real-time analytics, and then load data into some sort of application state or materialized view so that you drive dashboard or you can have batch or interactive layer above your data lake so that you can explore data in data lake. <br>
+
+Service as for batch and interactive analytics here are - Redshift, Athena, EMR, Presto. <br>

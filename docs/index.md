@@ -10,6 +10,7 @@ Big data Architectural Patterns <br>
 - [Data Processing Layer](Big-data-architectural-patterns/Big-data-architectural-patterns-4.md) <br>
 - [Data Consumption Layer](Big-data-architectural-patterns/Big-data-architectural-patterns-5.md) <br>
 - [Putting it all together](Big-data-architectural-patterns/Big-data-architectural-patterns-6.md) <br><br>
+- [Design Patterns](Big-data-architectural-patterns/Big-data-architectural-patterns-7.md)
 
 Storage Layer <br>
 - [Row-based Vs Column-based File Formats](Storage Layer Choices/row based and column based file formats.md) <br>
