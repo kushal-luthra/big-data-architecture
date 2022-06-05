@@ -1,53 +1,57 @@
 # Design Patterns
 
-
+## What is the temperature of my Data?
 ![img.png](img.png)
 
-When we talk about design patterns, it takes us back to our original question - 'What is the temperature of my Data?'
+As we talk about design patterns, it takes us back to our original question - **'What is the temperature of my Data?'** <br>
+Moving from left-hand side, we have Kinesis, Databases, Transactional databases and all the way to Data lakes & Cold storages. <br>
 
-On LHS we see Hot data, which has the following properties - 
-- data that is short-lived.
-- Such data loses value as it ages.
-- data you want to retrieve faster.
+On LHS we see **Hot data**, which has the following properties - <br> 
+- data that is short-lived. <br>
+- Such data loses value as it ages. <br>
+- data you want to retrieve faster. <br>
 
-On RHS, we have Cold Data, which has the following properties -
-- Data that consists of old records, which are archived.
-
-
-For Hot Data, you typically ingest using Amazon Kinesis, and perform Streaming Analytics using Spark Streaming/AWS Lambda/KCL Apps.
-For Interactive Analytics, you use Amazon Redshift/Athena/Spark-Presto combination.
-For Batch analytics, where response time is highest, you can use Hive.
-
---- old
-Moving from left-hand side, we have kinesis, databases, transactional databases and all the way to datalake, cold storages.
-if we take a look at Streaming Vs Interactive Vs Batch, what we have is ->
-- streaming analytics - done on streaming data source
-- batch analytics - done using Hive or aws batch technologies.
-- interactive analytics - done using multiple data sources - streaming/batch. Here typical practise w.r.t streaming data based interactive analytics is to use kinsesis stream, pipe it to S3, and use suite of tools available to you to be able to process that data once it hits S3.
+On RHS, we have **Cold Data**, which has the following properties - <br>
+- Data that consists of old records, which are archived. <br>
 
 
-
+For **Hot Data**, you typically ingest using Amazon Kinesis, and perform Streaming Analytics using Spark Streaming/AWS Lambda/KCL Apps. <br> <br>
+For **Interactive Analytics**, it is done using multiple data sources - streaming/batch. Here typical practise w.r.t streaming data based interactive analytics is to useKinesis stream, pipe it to S3, and use suite of tools available to you to be able to process that data once it hits S3. You use Amazon Redshift/Athena/Spark-Presto combination. <br><br>
+For **Batch Analytics**, where response time is highest, you can use Hive or AWS Batch technologies. <br><br>
 
 ## Streaming Analytics
 ![img_2.png](img_2.png)
+
+For Streaming data, very often you would want to do real-time analytics on that data, for which you could use Amazon Kinesis Data Analytics.
+Other options could be -
+- Amazon Lambda - to read your Stream.
+- KCL App
+- Micro batching - using spark streaming on Amazon EMR.
+
+Further, as you process the stream, you could do ML by utilizing end-points that are already available as part of Amazon AI ecosystem like Sagemaker.
+Likewise, you could do Fraud Alerts and send notification to users using Amazon SNS.
+
+You can store data to S3 for doing analytics later on.
+
 
 A stream typically arrives to Amazon Kinesis Data Streams, and you usually have Amazon Kinesis Data Analytics to do real-time analytics. Other options could be -
 - Amazon Lambda - to read your Stream.
 - KCL App
 - Micro batching - using spark streaming on Amazon EMR.
 
-Further, as you process the stream, you could do ML by utlizing end-points that are already available as part of Amazon AI ecosystem.
+Further, as you process the stream, you could do ML by utilizing end-points that are already available as part of Amazon AI ecosystem like Sagemaker.
 
 Likewise, you could do Fraud Alerts and send notification to users using Amazon SNS.
 
 You can store data to S3 for doing analytics later on.
 
-If you want to just capture the data to have real-time dashboard or feed a dashboard, then it is a good practise to export like an app state or Materialized View and have another system taht could be a database, like dynamoDb kind of system, and KPI dashboard being setup in front of streaming data.
+If you want to just capture the data to have real-time dashboard or feed a dashboard, then it is a good practise to export like an app state or Materialized View and have another system that could be a database, like DynamoDb kind of system, and KPI dashboard being setup in front of streaming data.
 
 
 old
 For data that is streaming, very often you would want to do real-time analytics on that data, for which you could use kinesis data analytics.
-You could use KCL App, Lambda or EMZR for spark streaming. 
+You could use KCL App, Lambda or EMR for spark streaming. 
+
 From tehre you would want to do tasks like real time predictive analytics on your data, for which you could use Sagemaker endpoints, which allows you to build these models, and have an end point that these services could cal, and once you call taht end ppint and if that its outside certain threshold, you could actually alert based on certain notification service like Amazon SNS.
 you could send that data to S3, and/or create materialze views or app states, and this is an area where you would want to create KPI perforance indicators, and this app state is one of the core architectural components which is used - caching use amazon elastic case or redis or mecache, or maybe dynamo.
 
