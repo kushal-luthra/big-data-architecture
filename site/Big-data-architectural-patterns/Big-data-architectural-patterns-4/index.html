@@ -356,6 +356,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#etl" class="md-nav__link">
+    ETL
+  </a>
+  
+    <nav class="md-nav" aria-label="ETL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-glue-etl" class="md-nav__link">
+    AWS Glue ETL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-data-migration-servicedms" class="md-nav__link">
+    Amazon Data Migration Service(DMS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -365,6 +392,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Big-data-architectural-patterns-5/" class="md-nav__link">
+        Data Consumption Layer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Big-data-architectural-patterns-6/" class="md-nav__link">
+        Putting it all together
+      </a>
     </li>
   
 
@@ -541,6 +596,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#etl" class="md-nav__link">
+    ETL
+  </a>
+  
+    <nav class="md-nav" aria-label="ETL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-glue-etl" class="md-nav__link">
+    AWS Glue ETL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-data-migration-servicedms" class="md-nav__link">
+    Amazon Data Migration Service(DMS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -572,34 +654,105 @@
 <h3 id="interactive-batch-analytics">Interactive &amp; Batch Analytics</h3>
 <p>First, let's look at interactive &amp; batch analytics. <br>
 <img alt="img.png" src="../images/img_17.png" /> <br></p>
-<p><strong>Elastic Search</strong> 
-  - Elastic Search clusters can be spun up in minutes.<br>
-  - Strongest use case is Log Analysis, wherein you have dashboard based on ELK (elastic search &amp; Kibana) stack. <br>
-  - Other use case is in datalake is metadata indexing. Since Elastic Search is a search, it will allow you query with some search - give search experience your queries. You could index your metadata to elastic search, and have an additional search ability over your data sources in a datalake. <br>
-- Redshift &amp; Redshift Spectrum - for data warehousing needs. <br>
-- Athena ~ Hive - perform SQL based queries on Data that resides on S3. <br>
-  - S3 Select - is somewhat similar to Athena, but there are some differences. <br>
-  - You can think about AWS S3 Select as a cost-efficient storage optimization that allows retrieving data that matches the predicate in S3 and glacier aka push down filtering. <br> 
-  - AWS Athena is fully managed analytical service that allows running arbitrary ANSI SQL compliant queries - group by, having, window and geo functions, SQL DDL and DML. <br>
-- EMR - Its Hadoop &amp; Spark as a service that lets you run various platform applications. <br>
-  - one thing special about EMR is that you have root access to EC2 instances that EMR is using unlike other managed services. <br>
-    eg - in RDS, you ENIN point that allows you to perform database functions, but you cannot do SSH on it. <br></p>
+<ul>
+<li>Amazon Elastic Search Service <br></li>
+<li>Ir is a managed service for Elastic Search.<br></li>
+<li>Elastic Search clusters can be spun up in minutes.<br></li>
+<li>Strongest <strong>use case</strong> is Log Analysis, wherein you have dashboard based on ELK (elastic search &amp; Kibana) stack. <br></li>
+<li>Other <strong>use case</strong> is in datalake is metadata indexing. Since Elastic Search is a search, it will allow you query with some search - give search experience your queries. You could index your metadata to elastic search, and have an additional search ability over your data sources in a datalake. <br></li>
+<li>Amazon Redshift &amp; Redshift Spectrum </li>
+<li>for data warehousing needs. Redhsift is a fully managed Data Warehouse. <br></li>
+<li>AWS Redshift is an OLAP system. Its an <strong>MPP (Massively Parallel Processing) System</strong>.  <br><ul>
+<li>It will allow us to query terabytes of data. <br></li>
+<li>Its a schema on read kind of system, wherein you define Schema first and put in a highly structured data. <br></li>
+</ul>
+</li>
+<li>Redshift Spectrum enables querying S3. <br></li>
+<li>Amazon  Athena ~ Hive <br></li>
+<li>It is Serverless interactive query service.<br></li>
+<li>Performs SQL based queries on Data that resides on S3. <br></li>
+<li>Similar to Presto/Hive. <br></li>
+<li>S3 Select <ul>
+<li>is somewhat similar to Athena, but there are some differences. <br></li>
+<li>You can think about AWS S3 Select as a cost-efficient storage optimization that allows retrieving data that matches the predicate in S3 and glacier aka push down filtering. <br> </li>
+<li>AWS Athena is fully managed analytical service that allows running arbitrary ANSI SQL compliant queries - group by, having, window and geo functions, SQL DDL and DML. <br></li>
+<li>Athena works on logical object selecting its information from AWS Glue Catalog rather than selecting data out of an object on S3. <br></li>
+<li>S3 Select works on object out of S3 bucket.</li>
+</ul>
+</li>
+<li>Amazon EMR <br></li>
+<li>Its Hadoop &amp; Spark as a Service that lets you run various platform applications. <br></li>
+<li>one thing special about EMR is that you have root access to EC2 instances that EMR is using unlike other managed services. <br>
+    eg - in RDS, you ENIN point that allows you to perform database functions, but you cannot do SSH on it. <br></li>
+</ul>
 <h3 id="streamingreal-time-analytics">Streaming/Real-time Analytics</h3>
-<p><img alt="img_1.png" src="../images/img_18.png" /> <br>
-If you look at Hadoop ecosystem, the number of services that perform real-time analytics has been growing - Spark Streaming, Flink, Storm.  <br>
+<p><img alt="img_1.png" src="../images/img_18.png" /> <br></p>
+<p>In Streaming analytics we have a number of options.
+1. Spark Streaming on Amazon EMR.
+2. Amazon Kinesis Data Analytics -
+   1. Its ia managed service for running SQL on streaming data.
+3. Amazon KCL
+   1. You can always create your own application by using Amazon Kinesis Client Library.
+4. Amazon Lambda
+   1. Run code serverless (without provisioning or managing servers).
+   2. Services such as S3 can publish events to AWS Lambda.
+   3. AWS Lambda can pool events from a Kinesis.</p>
+<p>If you look at Hadoop ecosystem, the number of services that perform real-time analytics has been growing - Spark Streaming, Flink, Storm.  <br>
 Just like Athena allows you to perform SQL queries on S3 even though it is not a relational database, AWS Kinesis Data Analytics allows you to perform SQL queries on your real time data even though it is not really a database. <br>
-So you could write SQL - tumbling windows, random cut forest, different sort of expressions to analyze data.</p>
-<p>In respect to AWS Lambda, one thing to note is that it polls every second.<br>
+So you could write SQL - tumbling windows, random cut forest, different sort of expressions to analyze data, and under the hood it will be working on real-time data feeds, and sending back the output. <br> </p>
+<p>As a customer one key question that needs to be answered while picking a tool is - <strong>'What is my end to end latency from point at which I publish a message to point at which I process the message and get final results?'</strong><br></p>
+<p>AWS Lambda lets you write functions, and set up an event trigger for Kinesis off of that. <br>
+But, in respect to AWS Lambda, one thing to note is that it polls every second.<br>
 That means if you are looking for sub-second latency, use other tool like Amazon KCL.<br></p>
 <h3 id="predictive-analytics">Predictive Analytics</h3>
 <p><img alt="img_2.png" src="../images/img_19.png" /> <br></p>
-<p><strong>Application Services</strong><br> 
-One thing is to note that make sure to write your data in open standards like orc, parquet, CSV or JSON. <br>
-That ways you can use different tools with it for your use case. <br></p>
+<p>Here you have the option to have 3 layers -
+1. Frameworks
+2. Platforms
+3. Application Services</p>
+<p>Frameworks
+It is for ML Practitioners, wherein you get the bare machines with those frameworks pre-installed, and you have to do traditional Machine Learning tasks like hyper-parameter tuning, etc.</p>
 <p><strong>Platforms</strong><br> 
-This layer allows us to build models and test them.<br></p>
+This layer allows us to build models and test them.<br>
+Helps ML experts to dod tasks like giving them jupyter notebooks, familiar interfacce, and then you can use Sagemaker API to create instance models and then you can deploy the model.
+Its one kind of place where you can do all ML tasks on the platform.</p>
+<p><strong>Application Services</strong><br> 
+It is for developers who want to use ML in their aplication, but dont want to implement ML
+So, we have some algorithm which are successful like NLP, and these can be integrated by calling these APIs.</p>
+<p>Application services help built different types of ML algos on the platform.<br>
+One thing is to note that make sure to write your data in <strong>open standards</strong> like orc, parquet, CSV or JSON. <br>
+That ways you can use different tools with it for your use case. <br></p>
 <h3 id="which-analytics-should-i-use">Which Analytics should I use?</h3>
 <p><img alt="img_3.png" src="../images/img_20.png" /></p>
+<p>Batch analytics - think of it as a report that runs  daily/weekly/monthly. <br>
+Tools - Amazon EMR, Hive/Spark. <br></p>
+<p>Interactive Analytics <br>
+See it is a s self-service dashboard, wherein you want to get answers yourself from the system. <br>
+Tools - Redshift, Athena, Amzon EMR on Spark/Presto. <br></p>
+<p>Stream Analytics <br>
+In EMR, you can utilize Spark Streaming, Kinesis Data analytics services. <br></p>
+<p>Predictive Analytics <br>
+It can be batch or streaming. <br></p>
+<p><img alt="img_4.png" src="../images/img_22.png" />
+<br><br><br>
+<img alt="img_5.png" src="../images/img_23.png" /></p>
+<h3 id="etl">ETL</h3>
+<p><img alt="img.png" src="../images/img_24.png" />
+Often times data comes in raw form, and what you want to do is to create curated datasets or canonical datasets, that represent a normalized view of data. <br>
+And that's where ETL process comes in. <br>
+And that normalized dataset is often in format different from the one that came in. <br>
+So, your raw data could be in JSON, CSV etc, and your output would often be a column oriented format(parquet/orc), or row-based format(Avro - handles schema changes better). <br></p>
+<p>One concern around ETL is that one loses value of data.
+But in truth, ETL helps transform data in format that is more suitable for doing analytics - partitioning, converting form text to parquert/orc.</p>
+<p>Below are AWS ETL options. <br>
+<img alt="img_1.png" src="../images/img_25.png" /><br></p>
+<h4 id="aws-glue-etl">AWS Glue ETL</h4>
+<p>Allows running spark/python shell. <br>
+it is a serverless category wherein you abstract server complexity from user. <br>
+you define data processing unit and schedule those jobs to run. <br></p>
+<h4 id="amazon-data-migration-servicedms">Amazon Data Migration Service(DMS)</h4>
+<p>If you want to have CDC (Change Data Capture), then Amazon Data Migration Service(DMS) is an option. <br>
+Glue isn't abl;e to do that, or you can look at CDC solution from partner services. <br></p>
 
               
             </article>
@@ -629,13 +782,13 @@ This layer allows us to build models and test them.<br></p>
       
       
         
-        <a href="../../Storage%20Layer%20Choices/row%20based%20and%20column%20based%20file%20formats/" class="md-footer__link md-footer__link--next" aria-label="Next: Row-based Vs Column-based File Formats" rel="next">
+        <a href="../Big-data-architectural-patterns-5/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Consumption Layer" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Row-based Vs Column-based File Formats
+              Data Consumption Layer
             </div>
           </div>
           <div class="md-footer__button md-icon">
