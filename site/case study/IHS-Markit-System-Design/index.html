@@ -603,28 +603,28 @@
   <h1>IHS Markit System Design Case Study (2020)</h1>
 
 <h3 id="ihs-markit-system-design-round">IHS Markit System Design Round</h3>
-<p>Sharing the question below for reference.</p>
-<p>We are given 3 data sources -&gt;
-1. Azure SQL Database -
-   1. contains dealership data, with info -&gt;
-      1. dealer_id
-      2. region
-      3. OEM Data
-   2. This data is updated once a week
-2. MongoDb database -
-   1. Customer Profile data
-      1. customer_id
-      2. dealer_id
-      3. array of marketing history
-   2. This data is updated once a day
-3. Pub/Sub queue messages containing Sales 
-   1. updated in real time
-   2. contains sales information, with info -&gt;
-      1. customer_id
-      2. dealer_id
-      3. timestamp of Sale</p>
-<p>Design a system to ingest data from multiple sources and report below Aggregates KPIs  on Dashboard
-- aggregate sales total by Dealer, Month, Region, OEM etc</p>
+<p>Sharing the question below for reference. <br></p>
+<p>We are given <strong>3 data sources</strong> -&gt; <br>
+1. Azure SQL Database - <br>
+   1. contains dealership data, with info -&gt; <br>
+      1. dealer_id <br>
+      2. region <br>
+      3. OEM Data <br>
+   2. This data is updated once a week <br>
+2. MongoDb database - <br>
+   1. Customer Profile data <br>
+      1. customer_id <br>
+      2. dealer_id <br>
+      3. array of marketing history <br>
+   2. This data is updated once a day <br>
+3. Pub/Sub queue messages containing Sales <br> 
+   1. updated in real time <br>
+   2. contains sales information, with info -&gt; <br>
+      1. customer_id <br>
+      2. dealer_id <br>
+      3. timestamp of Sale <br></p>
+<p>Design a system to ingest data from multiple sources and report below Aggregates KPIs  on Dashboard <br>
+- aggregate sales total by Dealer, Month, Region, OEM etc <br></p>
 
               
             </article>
