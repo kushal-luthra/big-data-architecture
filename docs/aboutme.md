@@ -1,4 +1,3 @@
-## About me 
 
 ![](images/wordcloud_kushal.jpg)
 

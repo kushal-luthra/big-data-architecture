@@ -16,7 +16,11 @@ Storage Layer <br>
 - [Row-based Vs Column-based File Formats](Storage Layer Choices/row based and column based file formats.md) <br>
 - [Text-based File Formats](Storage Layer Choices/Text File Formats.md) <br>
 - [Big Data File Formats](Storage Layer Choices/big data file formats.md) <br>
-- [File Compression Techniques in Big Data Systems](Storage Layer Choices/File Compression techniques in Big Data.md)
+- [File Compression Techniques in Big Data Systems](Storage Layer Choices/File Compression techniques in Big Data.md) <br>
+
+Case Study  <br>
+- [IHS Markit System Design Case Study (2020)](case study/IHS-Markit-System-Design.md)
+- [ZS Associates Data Consultant System Design Case Study (2020)](case study/ZS-Associates-Data-Consultant-Case-Study.md)
 
 <br><br><br>
 **Author** : [Kushal Luthra](aboutme.md) <br>
