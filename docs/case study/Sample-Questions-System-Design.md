@@ -54,12 +54,12 @@ What are things you will take care of for new jobs/sql? <br>
 
 #### Round 1
 There is a streaming service called Show-Stream ( like Netflix, Disney etc) that has customers spread over the globe. <br> 
-Show- Stream does not have a data warehouse in place.  <br>
-Design the pipeline to ingest the data from json events residing in S3. <br> 
-How will you go about it? How do you go about deciding the tech stack? <br>
-
+Show- **Stream** does not have a data warehouse in place.  <br>
+Design the pipeline to ingest the data from json **events** residing in S3 and build a **Data Warehouse**. <br> 
+How will you go about it? How do you go about deciding the **tech stack**? <br>
+```
 Source S3://showstrteam/rawEvents/<date>/<hr>/file_n.json ( multiple events in one file, 100 such files)
-
+```
 What are these events ?   <br>
 These events are all actions that the user performs on the app/browser :- user creation, playing a show, pausing a show, searching content etc etc. <br>
 
@@ -109,9 +109,11 @@ That is ,they drop off at the final tunnel. <br>
 ### Economist Case Study 
 
 The Economist Group’s core business is our global news subscriptions business. Users subscribe to a weekly online magazine. <br> 
-They go through various stages: anonymous visitor ==>registered user ==> subscriber. <br>
+They go through various **stages**: <br>
+_anonymous visitor ==> registered user ==> subscriber_. <br>
 
-All subscription information is stored in upstream **transactional systems** - **Salesforce** and **Zuora**. Different events can take place - cancellations, re-subscription/renewals. <br> 
+All subscription information is stored in upstream **transactional systems** - **Salesforce** and **Zuora**. <br>
+Different **events** can take place - cancellations, re-subscription/renewals. <br> 
 
 From time to time, the Group offers various promotions and offers in order to acquire new customers. <br> 
 The user behaviour data (**click stream** info) is also available in Google Analytics.  <br>
