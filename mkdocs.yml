@@ -30,6 +30,7 @@ nav:
   - Case Study:
     - IHS Markit System Design Case Study (2020): case study/IHS-Markit-System-Design.md
     - ZS Associates Data Consultant System Design Case Study (2020):  case study/ZS-Associates-Data-Consultant-Case-Study.md
+    - Interview Questions : case study/Sample-Questions-System-Design.md
   - About Me: aboutme.md
 
 extra:
