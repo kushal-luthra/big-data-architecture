@@ -441,6 +441,54 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          HBase
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          HBase
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HBase/Why%20HBase/" class="md-nav__link">
+        Why HBase
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -448,18 +496,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5">
           Case Study
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Case Study" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Case Study
         </label>
@@ -791,10 +839,11 @@ e.g.  <br></li>
 <h3 id="glance-inmobi">Glance / InMobi</h3>
 <h4 id="round-1_1">Round 1</h4>
 <p>There is a streaming service called Show-Stream ( like Netflix, Disney etc) that has customers spread over the globe. <br> 
-Show- Stream does not have a data warehouse in place.  <br>
-Design the pipeline to ingest the data from json events residing in S3. <br> 
-How will you go about it? How do you go about deciding the tech stack? <br></p>
-<p>Source S3://showstrteam/rawEvents/<date>/<hr>/file_n.json ( multiple events in one file, 100 such files)</p>
+Show- <strong>Stream</strong> does not have a data warehouse in place.  <br>
+Design the pipeline to ingest the data from json <strong>events</strong> residing in S3 and build a <strong>Data Warehouse</strong>. <br> 
+How will you go about it? How do you go about deciding the <strong>tech stack</strong>? <br></p>
+<pre><code>Source S3://showstrteam/rawEvents/&lt;date&gt;/&lt;hr&gt;/file_n.json ( multiple events in one file, 100 such files)
+</code></pre>
 <p>What are these events ?   <br>
 These events are all actions that the user performs on the app/browser :- user creation, playing a show, pausing a show, searching content etc etc. <br></p>
 <h4 id="round-2_1">Round 2</h4>
@@ -832,8 +881,10 @@ System Design to handle scenario wherein customers who used Uber app to take a r
 That is ,they drop off at the final tunnel. <br></p>
 <h3 id="economist-case-study">Economist Case Study</h3>
 <p>The Economist Group’s core business is our global news subscriptions business. Users subscribe to a weekly online magazine. <br> 
-They go through various stages: anonymous visitor ==&gt;registered user ==&gt; subscriber. <br></p>
-<p>All subscription information is stored in upstream <strong>transactional systems</strong> - <strong>Salesforce</strong> and <strong>Zuora</strong>. Different events can take place - cancellations, re-subscription/renewals. <br> </p>
+They go through various <strong>stages</strong>: <br>
+<em>anonymous visitor ==&gt; registered user ==&gt; subscriber</em>. <br></p>
+<p>All subscription information is stored in upstream <strong>transactional systems</strong> - <strong>Salesforce</strong> and <strong>Zuora</strong>. <br>
+Different <strong>events</strong> can take place - cancellations, re-subscription/renewals. <br> </p>
 <p>From time to time, the Group offers various promotions and offers in order to acquire new customers. <br> 
 The user behaviour data (<strong>click stream</strong> info) is also available in Google Analytics.  <br></p>
 <p>Design a <strong>data warehouse</strong> and associated <strong>data pipelines</strong> for the Economist Group so that the analysts and data scientists can report on key metrics.  Document the <br> 

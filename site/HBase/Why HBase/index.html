@@ -12,19 +12,19 @@
         <meta name="author" content="Kushal Luthra">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Big Data Architecture Patterns</title>
+        <title>Why HBase - Big Data Architecture Patterns</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -39,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-big-data-architecture" class="md-skip">
+        <a href="#4-conditions-for-a-database" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Big Data Architecture Patterns" class="md-header__button md-logo" aria-label="Big Data Architecture Patterns" data-md-component="logo">
+    <a href="../.." title="Big Data Architecture Patterns" class="md-header__button md-logo" aria-label="Big Data Architecture Patterns" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Why HBase
             
           </span>
         </div>
@@ -175,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Big Data Architecture Patterns" class="md-nav__button md-logo" aria-label="Big Data Architecture Patterns" data-md-component="logo">
+    <a href="../.." title="Big Data Architecture Patterns" class="md-nav__button md-logo" aria-label="Big Data Architecture Patterns" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -204,52 +204,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    Topics
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -288,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-1/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -302,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-2/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-2/" class="md-nav__link">
         Big Data Architectural Principles
       </a>
     </li>
@@ -316,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-3/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-3/" class="md-nav__link">
         Data Collection Layer
       </a>
     </li>
@@ -330,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-4/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-4/" class="md-nav__link">
         Data Processing Layer
       </a>
     </li>
@@ -344,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-5/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-5/" class="md-nav__link">
         Data Consumption Layer
       </a>
     </li>
@@ -358,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-6/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-6/" class="md-nav__link">
         Putting it all together
       </a>
     </li>
@@ -372,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-7/" class="md-nav__link">
+      <a href="../../Big-data-architectural-patterns/Big-data-architectural-patterns-7/" class="md-nav__link">
         Design Patterns
       </a>
     </li>
@@ -420,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Storage%20Layer%20Choices/row%20based%20and%20column%20based%20file%20formats/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/row%20based%20and%20column%20based%20file%20formats/" class="md-nav__link">
         Row-based Vs Column-based File Formats
       </a>
     </li>
@@ -434,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Storage%20Layer%20Choices/Text%20File%20Formats/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/Text%20File%20Formats/" class="md-nav__link">
         Text-based File Formats
       </a>
     </li>
@@ -448,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Storage%20Layer%20Choices/big%20data%20file%20formats/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/big%20data%20file%20formats/" class="md-nav__link">
         Big Data File Formats
       </a>
     </li>
@@ -462,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Storage%20Layer%20Choices/File%20Compression%20techniques%20in%20Big%20Data/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/File%20Compression%20techniques%20in%20Big%20Data/" class="md-nav__link">
         File Compression Techniques in Big Data Systems
       </a>
     </li>
@@ -482,12 +441,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -508,11 +469,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="HBase/Why%20HBase/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Why HBase
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Why HBase
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4-conditions-for-a-database" class="md-nav__link">
+    4 conditions for a database
+  </a>
+  
+    <nav class="md-nav" aria-label="4 conditions for a database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acid-properties" class="md-nav__link">
+    ACID Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-makes-a-very-poor-database-because" class="md-nav__link">
+    Hadoop makes a very poor database, because ...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-properties" class="md-nav__link">
+    Hbase properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -558,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="case%20study/IHS-Markit-System-Design/" class="md-nav__link">
+      <a href="../../case%20study/IHS-Markit-System-Design/" class="md-nav__link">
         IHS Markit System Design Case Study (2020)
       </a>
     </li>
@@ -572,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="case%20study/ZS-Associates-Data-Consultant-Case-Study/" class="md-nav__link">
+      <a href="../../case%20study/ZS-Associates-Data-Consultant-Case-Study/" class="md-nav__link">
         ZS Associates Data Consultant System Design Case Study (2020)
       </a>
     </li>
@@ -586,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="case%20study/Sample-Questions-System-Design/" class="md-nav__link">
+      <a href="../../case%20study/Sample-Questions-System-Design/" class="md-nav__link">
         Interview Questions
       </a>
     </li>
@@ -608,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aboutme/" class="md-nav__link">
+      <a href="../../aboutme/" class="md-nav__link">
         About Me
       </a>
     </li>
@@ -632,8 +657,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -642,9 +665,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    Topics
+  <a href="#4-conditions-for-a-database" class="md-nav__link">
+    4 conditions for a database
   </a>
+  
+    <nav class="md-nav" aria-label="4 conditions for a database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acid-properties" class="md-nav__link">
+    ACID Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hadoop-makes-a-very-poor-database-because" class="md-nav__link">
+    Hadoop makes a very poor database, because ...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-properties" class="md-nav__link">
+    Hbase properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -660,37 +710,58 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/Why HBase.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="welcome-to-big-data-architecture">Welcome to Big Data Architecture</h1>
-<p><img alt="" src="images/Front_page.jpeg" /></p>
-<h2 id="topics">Topics</h2>
-<p>Big data Architectural Patterns <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-1/">Introduction</a> <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-2/">Big Data Architectural Principles</a> <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-3/">Data Collection Layer</a> <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-4/">Data Processing Layer</a> <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-5/">Data Consumption Layer</a> <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-6/">Putting it all together</a> <br>
-- <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-7/">Design Patterns</a><br></p>
-<p>Storage Layer <br>
-- <a href="Storage%20Layer%20Choices/row%20based%20and%20column%20based%20file%20formats/">Row-based Vs Column-based File Formats</a> <br>
-- <a href="Storage%20Layer%20Choices/Text%20File%20Formats/">Text-based File Formats</a> <br>
-- <a href="Storage%20Layer%20Choices/big%20data%20file%20formats/">Big Data File Formats</a> <br>
-- <a href="Storage%20Layer%20Choices/File%20Compression%20techniques%20in%20Big%20Data/">File Compression Techniques in Big Data Systems</a> <br></p>
-<p>HBase <br>
-- <a href="HBase/Why%20HBase/">Why HBase? </a> <br></p>
-<p>Case Study  <br>
-- <a href="case%20study/IHS-Markit-System-Design/">IHS Markit System Design Case Study (2020)</a> <br>
-- <a href="case%20study/ZS-Associates-Data-Consultant-Case-Study/">ZS Associates Data Consultant System Design Case Study (2020)</a> <br>
-- <a href="case%20study/Sample-Questions-System-Design/">Interview Questions</a>
-<br><br><br>
-<strong>Author</strong> : <a href="aboutme/">Kushal Luthra</a> <br>
-<strong>repo url</strong> : https://github.com/kushal-luthra/big-data-architecture</p>
+  <h1>Why HBase</h1>
+
+<h3 id="4-conditions-for-a-database">4 conditions for a database</h3>
+<ol>
+<li>Structured data – data is stored in rows and columns <br></li>
+<li>Random access – to values <br></li>
+<li>Low latency – in a given set of rows if you want to search one row, it can be done in short span of time. We have features like indexes to facilitate this. <br>
+   Both low latency and random access are co-related – both happen alongside. <br></li>
+<li>ACID properties. <br></li>
+</ol>
+<h4 id="acid-properties">ACID Properties</h4>
+<p><strong>Atomic</strong> <br>
+Eg – A is transferring Rs 5000 to B’s a/c, then 2 operations are happening – debit in A’s a/c and credit in B’s a/c
+Atomicity means either both operations happen, or none happen. <br></p>
+<p><strong>Consistency</strong> <br>
+It means the <strong>constraints</strong> should be met. <br>
+Eg- we have employee table, and I want each employee to have new ID, here we can place unique key constraint.  <br>
+We can place different kinds of constraints to ensure data is consistent as per our requirements. <br></p>
+<p><strong>Isolation</strong> <br>
+Isolation means that If 2 persons are operating on a row – both are making a change to row, then these operations shouldn’t happen at random.  <br>
+There should be a sequence associated with them through lock mechanism. <br>
+That is concurrent operations on database should appear as though they happen in some sequence. <br> </p>
+<p><strong>Durability</strong>  <br>
+It means that whenever the system fails due crash, power cut etc, it should not be that system comes down. <br> That is data is safe. <br>
+Things should be up and running after failure.  <br></p>
+<h4 id="hadoop-makes-a-very-poor-database-because">Hadoop makes a very poor database, because ...</h4>
+<ol>
+<li>Supports unstructured data <br></li>
+<li>No random access <br></li>
+<li>Data kept in form of files and not rows and columns. <br> </li>
+<li>So, random access not possible. <br></li>
+<li>High latency  <br></li>
+<li>No ACID compliance <br></li>
+</ol>
+<p>To overcome limitation of random access or quick access of data, google published a paper on <strong>Big Table</strong>, a distributed storage system for structured data. <br>
+To recall, google gave 2 main papers, initially  – <br>
+•   GFS or google file system – for storage <br>
+•   MapReduce – for processing <br></p>
+<p>Now, it gave another paper for quick searching – BigTable. <br></p>
+<p>Hbase is a distributed database management system, that runs on top of Hadoop. <br>
+So, if you have 4 node Hadoop cluster, Hbase runs on this Hadoop cluster. <br></p>
+<p><img alt="img.png" src="../img.png" /><br></p>
+<h4 id="hbase-properties">Hbase properties</h4>
+<p>•   Distributed – stores data in HDFS <br>
+•   Scalable – capacity directly proportional to number of nodes in the cluster. <br>
+•   Fault tolerant – piggybacks on Hadoop. HDFS gives replication of data, and so same for HBase. <br></p>
 
               
             </article>
@@ -703,15 +774,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../../Storage%20Layer%20Choices/File%20Compression%20techniques%20in%20Big%20Data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: File Compression Techniques in Big Data Systems" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              File Compression Techniques in Big Data Systems
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="Big-data-architectural-patterns/Big-data-architectural-patterns-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+        <a href="../../case%20study/IHS-Markit-System-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: IHS Markit System Design Case Study (2020)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction
+              IHS Markit System Design Case Study (2020)
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -776,10 +862,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
     
   </body>

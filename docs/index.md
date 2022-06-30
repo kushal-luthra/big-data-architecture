@@ -18,6 +18,9 @@ Storage Layer <br>
 - [Big Data File Formats](Storage Layer Choices/big data file formats.md) <br>
 - [File Compression Techniques in Big Data Systems](Storage Layer Choices/File Compression techniques in Big Data.md) <br>
 
+HBase <br>
+- [Why HBase? ](HBase/Why HBase.md) <br>
+
 Case Study  <br>
 - [IHS Markit System Design Case Study (2020)](case study/IHS-Markit-System-Design.md) <br>
 - [ZS Associates Data Consultant System Design Case Study (2020)](case study/ZS-Associates-Data-Consultant-Case-Study.md) <br>
