@@ -17,7 +17,7 @@
     
     
       
-        <title>7 Hbase - Big Data Architecture Patterns</title>
+        <title>Cassandra 101 - Big Data Architecture Patterns</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#what-is-casandra" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7 Hbase
+              Cassandra 101
             
           </span>
         </div>
@@ -436,12 +441,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -537,6 +544,105 @@
       <a href="../6-HBase/" class="md-nav__link">
         CAP Theorem
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cassandra 101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cassandra 101
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-casandra" class="md-nav__link">
+    What is Casandra?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cap-theorem-cassandra-eventual-consistency" class="md-nav__link">
+    CAP theorem &amp; Cassandra (Eventual Consistency)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-cassandra-cluster-looks-like" class="md-nav__link">
+    How does Cassandra Cluster looks like?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tunable-readwrite-consistency" class="md-nav__link">
+    Tunable Read/Write Consistency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-hbase-and-cassandra" class="md-nav__link">
+    Differences between Hbase and Cassandra
+  </a>
+  
+    <nav class="md-nav" aria-label="Differences between Hbase and Cassandra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#similarities" class="md-nav__link">
+    Similarities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences" class="md-nav__link">
+    Differences
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -657,6 +763,69 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-casandra" class="md-nav__link">
+    What is Casandra?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cap-theorem-cassandra-eventual-consistency" class="md-nav__link">
+    CAP theorem &amp; Cassandra (Eventual Consistency)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-cassandra-cluster-looks-like" class="md-nav__link">
+    How does Cassandra Cluster looks like?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tunable-readwrite-consistency" class="md-nav__link">
+    Tunable Read/Write Consistency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-hbase-and-cassandra" class="md-nav__link">
+    Differences between Hbase and Cassandra
+  </a>
+  
+    <nav class="md-nav" aria-label="Differences between Hbase and Cassandra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#similarities" class="md-nav__link">
+    Similarities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences" class="md-nav__link">
+    Differences
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -667,15 +836,110 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/7-Hbase.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/7-HBase.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>7 Hbase</h1>
+  <h1>Cassandra 101</h1>
 
-
+<p>So far, we have discussed so far – <br>
+•   What is Hbase? <br>
+•   Why NoSQL required and where Hbase solves our purpose? <br>
+•   What is CAP theorem? <br></p>
+<p>Cassandra is an alternate to Hbase but with Hadoop it is not that much famous. <br></p>
+<p>Topics –
+1.  What is Casandra
+2.  CAP theorem &amp; Cassandra
+3.  How does Cassandra cluster looks like?
+4.  Tunable read/write consistency.
+5.  Diff between HBase and Cassandra</p>
+<h4 id="what-is-casandra">What is Casandra?</h4>
+<p>It is a distributed column-oriented database and highly performant. <br>
+Since distributed, so highly scalable – add few more nodes and it scales out. <br></p>
+<p>When do we use Cassandra -&gt; When we require transactional activities or quick searching – low latency retrieval of data, we can use Cassandra. <br></p>
+<p>So far this is similar to Hbase. <br></p>
+<h4 id="cap-theorem-cassandra-eventual-consistency">CAP theorem &amp; Cassandra (Eventual Consistency)</h4>
+<p>Hbase is CP system. <br>
+Cassandra is AP system. <br></p>
+<p>Consistency is eventual – if you retrieve data it might respond in some time. <br>
+Consider you have LinkedIn profile and someone likes your posts. <br>
+Consider you have 1000 likes on posts, and after this 1 more person does a like – system shows 1001 likes, but sometimes it gives 1000 likes. That is not latest value. <br>
+That is, we can tolerate late information in this use case. Here getting a response, i.e. Availability is more important. <br></p>
+<p>It won’t show error, and gives eventual consistency. <br></p>
+<h4 id="how-does-cassandra-cluster-looks-like">How does Cassandra Cluster looks like?</h4>
+<p>In case of Hbase, we run on Hadoop cluster, and like Hadoop, Hbase also follows Master-Slave architecture, wherein - <br>
+-   HMaster = master <br>
+-   Region Server = Slave <br>
+If master goes down, the system crashes ~ non-availability. <br></p>
+<p>In Cassandra, it follows Peer-to-Peer architecture, wherein -&gt; <br>
+-   There is no master <br>
+-   All nodes are peers <br>
+-   It’s a Decentralized architecture <br>
+-   Nodes communicate using Gossip Protocol. <br></p>
+<p>A master slave architecture can be down at time when master fails. <br>
+In Cassandra, because of Decentralized Architecture, where there is no master, it is highly available. <br></p>
+<h4 id="tunable-readwrite-consistency">Tunable Read/Write Consistency</h4>
+<p>Cassandra is a AP System. <br>
+It by default compromises on the consistency in order to be highly available. <br>
+Step 1: Client will send request to get value of A. <br>
+Step 2: The request will go to one of the machines, for instance node5. <br>
+Step 3: Node 5 will go and talk to Node 1 to get the results. <br>
+Step 4 : Node 5 will return the result to the client. <br>
+Cassandra provides you a tunable consistency through Quorum. <br>
+So, you can tune to get result -based on 3 approaches  <br>
+-   1 node. <br>
+o   Default mode. <br>
+o   Availability is High + Consistency is Low <br>
+-   Quorum based <br>
+o   I want the result only when 2 nodes agree on the same result. Here Quorum = 2 <br>
+o   Availability is High + Consistency is moderate <br>
+-   All Node based  <br>
+o   I want the result only when all nodes agree on the same result. <br>
+o   Availability is Low + Consistency is High  <br></p>
+<h4 id="differences-between-hbase-and-cassandra">Differences between Hbase and Cassandra</h4>
+<h5 id="similarities">Similarities</h5>
+<ul>
+<li>Both are NoSQL databases <br></li>
+<li>Both hold data in columnar fashion <br></li>
+<li>Both are highly scalable <br></li>
+<li>Used when you want to perform <br> </li>
+<li>transactions (update/inserts) <br></li>
+<li>quick reads. <br></li>
+<li>Low latency operations <br></li>
+</ul>
+<h5 id="differences">Differences</h5>
+<table>
+<thead>
+<tr>
+<th>Hbase</th>
+<th>Cassandra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>master-slave architecture</td>
+<td>decentralized architecture (so highly available as no dependency on single master)</td>
+</tr>
+<tr>
+<td>CP</td>
+<td>AP + Tuneable Consistency (one node, all node, Quorum based)</td>
+</tr>
+<tr>
+<td>runs on top of Hadoop cluster - so data kept in HDFS</td>
+<td>has a separate cluster</td>
+</tr>
+<tr>
+<td>preferred choice when working on Hadoop cluster</td>
+<td>Not suited with hadoop</td>
+</tr>
+<tr>
+<td>Hbase can be accessed using Shell commands, which are somewhat hard to understand. <br>You can use Apache Phoenix on top of Hbase to give you SQL-like interface.</td>
+<td>It has its own SQL-like syntax, called Cassandra SQL (CSQL).</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
@@ -685,6 +949,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../6-HBase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CAP Theorem" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CAP Theorem
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../case%20study/IHS-Markit-System-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: IHS Markit System Design Case Study (2020)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              IHS Markit System Design Case Study (2020)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
