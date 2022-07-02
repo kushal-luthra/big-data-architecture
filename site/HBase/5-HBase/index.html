@@ -17,7 +17,7 @@
     
     
       
-        <title>Big Data File Formats - Big Data Architecture Patterns</title>
+        <title>HBase Architecture - Part 2 - Big Data Architecture Patterns</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#avro-orc-and-parquet" class="md-skip">
+        <a href="#region-server" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Big Data File Formats
+              HBase Architecture - Part 2
             
           </span>
         </div>
@@ -351,14 +351,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -381,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../row%20based%20and%20column%20based%20file%20formats/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/row%20based%20and%20column%20based%20file%20formats/" class="md-nav__link">
         Row-based Vs Column-based File Formats
       </a>
     </li>
@@ -395,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Text%20File%20Formats/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/Text%20File%20Formats/" class="md-nav__link">
         Text-based File Formats
       </a>
     </li>
@@ -407,48 +405,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Big Data File Formats
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Storage%20Layer%20Choices/big%20data%20file%20formats/" class="md-nav__link">
         Big Data File Formats
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#avro-orc-and-parquet" class="md-nav__link">
-    Avro, ORC and Parquet
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -460,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../File%20Compression%20techniques%20in%20Big%20Data/" class="md-nav__link">
+      <a href="../../Storage%20Layer%20Choices/File%20Compression%20techniques%20in%20Big%20Data/" class="md-nav__link">
         File Compression Techniques in Big Data Systems
       </a>
     </li>
@@ -480,12 +441,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -508,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../HBase/1-HBase/" class="md-nav__link">
+      <a href="../1-HBase/" class="md-nav__link">
         Why HBase
       </a>
     </li>
@@ -522,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../HBase/2-HBase/" class="md-nav__link">
+      <a href="../2-HBase/" class="md-nav__link">
         HBase Properties
       </a>
     </li>
@@ -536,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../HBase/3-HBase/" class="md-nav__link">
+      <a href="../3-HBase/" class="md-nav__link">
         HBase Components
       </a>
     </li>
@@ -550,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../HBase/4-HBase/" class="md-nav__link">
+      <a href="../4-HBase/" class="md-nav__link">
         HBase Architecture - Part 1
       </a>
     </li>
@@ -562,11 +525,124 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../HBase/5-HBase/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HBase Architecture - Part 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         HBase Architecture - Part 2
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#region-server" class="md-nav__link">
+    Region Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hmaster" class="md-nav__link">
+    HMaster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zookeeper" class="md-nav__link">
+    Zookeeper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datanode-hdfs" class="md-nav__link">
+    DataNode (HDFS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-table" class="md-nav__link">
+    META Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hbase-readwrite-operations" class="md-nav__link">
+    Hbase Read/Write Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Hbase Read/Write Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hbase-write-operations" class="md-nav__link">
+    Hbase Write operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-read-operations" class="md-nav__link">
+    Hbase Read operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compactions" class="md-nav__link">
+    Compactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hbase-data-deletion-tombstone-markers" class="md-nav__link">
+    Hbase Data Deletion &amp; Tombstone Markers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-case-of-server-failure" class="md-nav__link">
+    In the case of Server Failure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -694,8 +770,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#avro-orc-and-parquet" class="md-nav__link">
-    Avro, ORC and Parquet
+  <a href="#region-server" class="md-nav__link">
+    Region Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hmaster" class="md-nav__link">
+    HMaster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zookeeper" class="md-nav__link">
+    Zookeeper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datanode-hdfs" class="md-nav__link">
+    DataNode (HDFS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-table" class="md-nav__link">
+    META Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hbase-readwrite-operations" class="md-nav__link">
+    Hbase Read/Write Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Hbase Read/Write Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hbase-write-operations" class="md-nav__link">
+    Hbase Write operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hbase-read-operations" class="md-nav__link">
+    Hbase Read operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compactions" class="md-nav__link">
+    Compactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hbase-data-deletion-tombstone-markers" class="md-nav__link">
+    Hbase Data Deletion &amp; Tombstone Markers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-case-of-server-failure" class="md-nav__link">
+    In the case of Server Failure
   </a>
   
 </li>
@@ -712,119 +864,140 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/Storage Layer Choices/big data file formats.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/5-HBase.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Big Data File Formats</h1>
+  <h1>HBase Architecture - Part 2</h1>
 
-<h2 id="avro-orc-and-parquet">Avro, ORC and Parquet</h2>
-<p>There major ones that work well with Big Data Environment are – <br>
-•   Avro <br>
-•   Orc <br>
-•   Parquet <br></p>
-<p>All of above are – <br>
-•   Splittable
-•   Agnostic compression -  <br>Any compression can be used with them, without readers having to know the codec. <br> This is possible because codec is stored in the header metadata of the file format. <br>
-Reader needn’t know in advance what kind of compression technique is used with these files. <br> Compression codec is kept in file metadata, and whenever reader wants to read the data, he gets to know compression codec from metadata and can easily read the data. <br></p>
-<p>Avro File Formats <br>
-1.  It is a row-based file format – data is stored row-by-row. <br>
-So, it supports faster writes, but slower reads (when you want to read a subset of columns). <br>
-2.  Self-describing schema - Schema is stored in JSON format and this metadata is embedded as part of data itself. <br>
-3.  Actual data is stored in Compressed Binary format, which is quite efficient in terms of storage. <br>
-4.  Language Neutral - Avro file format is general file format, and supports processing using lot of programming languages like C++, java, Python, Ruby, etc <br>
-5.  Schema Evolution – Avro is quite mature in terms of schema evolution as compared to other file formats. Schema evolution includes aspects like – <br>
-a.  Adding new columns <br>
-b.  Removing old column <br>
-c.  Renaming columns, etc <br>
-6.  Splittable – file can be divided into parts which can be processed independently. <br></p>
-<p>Avro is a Serialization format. <br>
-Serialization – converting data into a form which can be easily transferred over a network and stored in a file system. <br>
-Deserialization – reading data and converting it into form which can be read by human.  <br></p>
-<p>In which scenario, Avro is best suited – <br>
-•   For storing data in <strong>landing zone of data lake</strong> – why – <br>
-o   In lake, chances are different team requiring raw data, and since Avro is language neutral, so different teams can use it. <br>
-o   In lake, data is unprocessed, that is no ETL done. For ETL kind of operations, we tend to read whole row and not a subset of it, and here again Avro is suited. <br>
-    KL – in dh, we read only subset of data in lake to build warehouse. So, this point is debatable.  <br>
-o   Finally, in lake, data schema evolves over time, and so Avro is suited for handling Schema evolution. <br>
-•   Avro is typically the format of choice for write-heavy workloads given it is easy to append new rows. <br></p>
-<p><strong>Avro Vs Orc</strong> <br></p>
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Avro</th>
-<th>Parquet</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>format</td>
-<td>row based</td>
-<td>column based</td>
-</tr>
-<tr>
-<td>reads</td>
-<td>slower reads</td>
-<td>faster reads - so useful for analytical querying</td>
-</tr>
-<tr>
-<td>writes</td>
-<td>faster writes -  so suited to ETL operations.</td>
-<td>slower writes</td>
-</tr>
-<tr>
-<td>schema evolution</td>
-<td>it is quite mature wrt Schema Evolution</td>
-<td>Limited schema evolution support - you can add/delete column from the end.</td>
-</tr>
-<tr>
-<td>complex data types</td>
-<td>No such support.</td>
-<td>Provides support for deeply nested data structure.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Orc Vs Parquet</strong></p>
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Orc</th>
-<th>Parquet</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>format</td>
-<td>column based</td>
-<td>column based</td>
-</tr>
-<tr>
-<td>predicate push down</td>
-<td>provides predicate push down to push the predicates at storage level - that allows us to query relevant data.</td>
-<td>No such support</td>
-</tr>
-<tr>
-<td>ACID properties</td>
-<td>Now supports ACID properties to an extent.</td>
-<td>No such support.</td>
-</tr>
-<tr>
-<td>Compression</td>
-<td>Better - has lot more encodings used as compared to parquet.</td>
-<td>good</td>
-</tr>
-<tr>
-<td>complex data types</td>
-<td>No such support.</td>
-<td>Provides support for deeply nested data structure.</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="img.png" src="../images/img_3.png" /></p>
+<p>To recall -&gt; 
+An Hbase table is divided into regions, and in each Region, data is sorted based on row-key. <br>
+These Regions are stored in Region Servers, and a Region Server can handle many regions. <br></p>
+<p>In each region, there is a memstore per column family.  <br>
+A memstore is an in-memory write buffer. It stores new or updated data that has not yet been written to HDFS. <br>
+This data gets flushed to HDFS in a new HFile consisting of sorted key-value pairs at regular intervals or based on MemStore size. <br>
+These HFiles are written to the Data nodes of HDFS. <br></p>
+<p>Hbase architecture is also based on master-Slave Architecture, where HMaster is the master and region servers act as slaves. <br>
+<img alt="img.png" src="../img_21.png" /><br></p>
+<p>In above, we have various components of Hbase Architecture. <br>
+We have -&gt; <br>
+- 1 Zookeeper <br>
+- 1 HMaster <br>
+- 2 Region Servers. <br>
+- Each region server has-&gt; <br>
+  - 1 WAL/HLog <br>
+  - 1 Block Cache <br>
+  - 2 Regions. <br>
+- Each Region has <br> 
+  - MemStore, and associated HFiles. <br></p>
+<h4 id="region-server">Region Server</h4>
+<p>A region server manages regions. There are multiple regions in a cluster. <br></p>
+<p>Each region server contains the following -&gt; <br>
+- <strong>WAL</strong> – Write-Ahead-Log, also known as <strong>HLog</strong>.  <br>
+  - WAL stores New or Updated data that has not been written to permanent storage (as HFiles in HDFS) and can be used for recovery in case of region server failure. <br>
+  - The region server stores the WAL File in HDFS. <br>
+  - So, new data goes to WAL, and from there to MemStore, and on flushing MemStore, it gets persisted to permanent disk – HFile. <br>
+- Block Cache – which is a read cache, stores frequently read data from HDFS. <br>
+- Region –
+    - which is assigned a region of the table.  <br>
+    - Each region contains a MemStore per Column Family. <br></p>
+<p>A Client interacts directly with the region server to perform read/write operations. <br></p>
+<h4 id="hmaster">HMaster</h4>
+<p>It acts as the Master server and manages multiple Region Servers. <br></p>
+<p>An Hbase cluster may have 1 or more Master nodes, but only 1 HMaster is active a given time. <br>
+This active node is responsible for – <br>
+- Performing the admin functionalities: HMaster performs DDL operations such as Creating or Deleting Table. That is where structure of table is involved, HMaster is involved. <br>
+- Coordinating with the region servers: HMaster assigns regions to various region servers on start-up and reassigns in case of load balancing or recovery. <br>
+- Load Balancing: whenever there is High load on any region server, HMaster unloads the busy server and reassigns this load to less occupied servers. <br>
+- Recovery: HMaster also handles region server failures by re-assigning the regions or load of the failed region server to another non-failing region server. <br></p>
+<h4 id="zookeeper">Zookeeper</h4>
+<ul>
+<li>It is a distributed open-source coordinating service for distributed applications. <br></li>
+<li>Hbase uses Zookeeper to maintain the live server state in the cluster by receiving heartbeat messages from all HMasters (active/ inactive) and Region Servers. So in case it doesn’t receive heartbeat from -&gt; </li>
+<li>HMaster – it assumes that is dead, and assigns this role to another passive HMaster.</li>
+<li>Region Server – it assumes this is dead, and informs HMaster, which in turn takes steps to reassign its load to some other region server.</li>
+<li>It stores the location of META Table.</li>
+</ul>
+<p><img alt="img.png" src="../img_22.png" /><br></p>
+<h4 id="datanode-hdfs">DataNode (HDFS)</h4>
+<p>Hbase stores 2 types of files in DataNode of HDFS -&gt; <br>
+1. WAL
+a.  There is 1 WAL file per Region Server that stores the MemStore Data. <br>
+b.  WAL is replayed by region servers in case of a region server crash. <br>
+ <br>
+2. HFiles <br>
+a.  It stores the Hbase table data as sorted key-value pairs. <br>
+b.  HFiles are immutable, which means once written, they can’t be modified. <br>
+c.  HFiles are large in size and depend upon the MemStore flush size before compaction. <br>
+d.  HFiles further store data as sets of blocks. This helps in only reading the block, which contains data of interest and not the complete HFile. <br>
+e.  The default block size is 64KB. <br>
+f.  The Data Block Index is an HFile is used to locate the data lock of interest. It contains the key range stored in each data block <br>
+g.  To illustrate -&gt; <br>
+Consider the HFile has size of 250Mb, and Block Size is 64 KB. <br> 
+Then in case if you figure out which HFile holds the data, then entire file need not be scanned. <br> 
+Rather, based on Block indexes, we get to know which block holds the data, and then that particular block is scanned to get the results. <br> 
+So, we are not scanning 250 MB, but rather 64Kb. In truth, it is less than 64Kb as data in blocks are stored in sorted manner, and a binary search algo is applied within a block to search for the data. <br></p>
+<h4 id="meta-table">META Table</h4>
+<p><img alt="img.png" src="../img_23.png" /><br></p>
+<p>A Meta Table is a data structure that stores the location of regions along with the region servers. <br>
+It helps the user identify the region server and its corresponding regions where specific range of key-value pairs is stored. <br>
+The Meta Table is stored in one of the region servers, and its location is stored in the Zookeeper. <br></p>
+<h4 id="hbase-readwrite-operations">Hbase Read/Write Operations</h4>
+<p>The common Steps involved in Hbase read/write operations are as follows -&gt; <br></p>
+<p>Step 1: The client contacts the Zookeeper to fetch the location of the Meta Table ( if the client doesn’t have the latest version of Meta Table already cached). <br></p>
+<p>Step 2: the Client queries the Meta Table to find the location of the region server, which has the region containing the row-key that the client is looking for. <br></p>
+<p>Step 3: The client caches the identified region server's information as well as the Meta Table location, for future interactions.  <br></p>
+<p>Step 4: The client can now communicate with the specific region’s server, identified in the Step 2 above. This regions server assigns the request to the specific region, where the read/write operations can be executed. <br></p>
+<p><img alt="img.png" src="../img_24.png" /><br></p>
+<h5 id="hbase-write-operations">Hbase Write operations</h5>
+<p><img alt="img.png" src="../img_25.png" /><br>
+Step 1: The data first needs to be written to WAL, which is a Write ahead Log. Why – coz data shouldn’t be first written to MemStore which has risk of data loss in case of region server crash. <br>
+WAL stores the new or updated data that has not been written to HDFS and can be used for recovery in case of a region server failure. <br></p>
+<p>Step 2: Once data is written to WAL, it is placed in MemStore of a region. <br>
+When MemStore becomes full, its contents are flushed to HDFS (Data Node), to form a new HFile. <br></p>
+<p>Step 3: Finally, an acknowledgment is sent back to the client. <br></p>
+<h5 id="hbase-read-operations">Hbase Read operations</h5>
+<p><img alt="img.png" src="../img_26.png" /><br></p>
+<p>Whenever we are reading, we want to read in a way that it takes minimum time as possible. <br></p>
+<p>Step 1: The region server first checks the Block Cache of the region server that stores the recently accessed data. <br></p>
+<p>Step 2: in case the data is not available in the Block Cache, it checks for the required data in the in-memory store, i.e., MemStore. <br></p>
+<p>Step 3: If the MemStore doesn’t contain that particular key-value, then HFile containing that particular key-value pair is identified. <br></p>
+<p>Once the HFile is identified, instead of reading the entire HFile (~ GB Size), the Data Block index of HFile is scanned to get the Data Block with key-value pair, a Binary search in this data block finally returns the key-value pair (or null in case it doesn’t exists). <br></p>
+<h4 id="compactions">Compactions</h4>
+<p>Flushes from MemStore to HDFS create multiple HFiles, especially during periods of heavy incoming writes, which leads to 2 major problems -&gt; <br>
+1.  The read efficiency gets low. This is because a large number of HFiles increase the number of disk-seeks needed for a read process, thereby adversely impacting the read performance. <br>
+2.  It leads to dirty data. A large number of HFiles might result in a lot of redundancy and inconsistency in data. <br></p>
+<p>Compaction comes to our rescue against these challenges. <br>
+It refers to the process of combining small HFiles to large HFiles, containing merged, sorted, and most recent information. <br>
+Compactions are of 2 types - <br>
+- Minor -&gt; Here Hbase picks only some of the smaller HFiles and rewrites them into a few larger HFiles. <br>
+- Major – here all HFiles of a store are picked and rewritten into a single large HFile. (It is 1 HFile per MemStore. Eg – below image – in end, we have 2 HFiles – 1 per MemStore). <br></p>
+<p>Major compaction is more resource intensive than minor compaction, and therefore, admins generally prefer minor compaction to major ones. <br>
+ <br>
+<img alt="img.png" src="../img_27.png" /><br></p>
+<h4 id="hbase-data-deletion-tombstone-markers">Hbase Data Deletion &amp; Tombstone Markers</h4>
+<p>Remember -&gt; <br>
+- HDFS is a write-only system. So, data is only written and cannot be updated. <br> 
+- Que – how does Hbase support update operations? <br>
+- Ans – through Timestamp. It maintains version of information for a column in a row, and when retrieving you see latest value even though older values are still present and can be accessed. <br>
+ <br>
+Delete is a special type of update in Hbase, where the values for which the delete request is submitted are not deleted immediately. <br>
+Rather, these values are masked by assigning a Tombstone Marker to them. So, a new record is inserted in Delete operation, and that masks previous values. <br> <br> 
+Every request to read these values (with tombstone markers) returns null to the client, which give client the impression that values are already deleted. <br>
+The reason why Hbase does this is because HFiles are immutable.  <br>
+Recall that HDFS doesn’t allow modifying the data of a file. All the values with Tombstone markers are permanently removed during the next Major Compaction. <br></p>
+<h4 id="in-the-case-of-server-failure">In the case of Server Failure</h4>
+<ol>
+<li>
+<p>If the active HMaster fails, the Zookeeper gives the master’s responsibility to one of the inactive HMaster’s in the cluster. <br></p>
+</li>
+<li>
+<p>If a region server fails, Zookeeper notifies the HMaster about it. <br>
+HMaster reassigns the regions of the failed region server to some other region server. <br></p>
+</li>
+</ol>
 
               
             </article>
@@ -838,7 +1011,7 @@ o   Finally, in lake, data schema evolves over time, and so Avro is suited for h
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Text%20File%20Formats/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Text-based File Formats" rel="prev">
+        <a href="../4-HBase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HBase Architecture - Part 1" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -847,20 +1020,20 @@ o   Finally, in lake, data schema evolves over time, and so Avro is suited for h
               <span class="md-footer__direction">
                 Previous
               </span>
-              Text-based File Formats
+              HBase Architecture - Part 1
             </div>
           </div>
         </a>
       
       
         
-        <a href="../File%20Compression%20techniques%20in%20Big%20Data/" class="md-footer__link md-footer__link--next" aria-label="Next: File Compression Techniques in Big Data Systems" rel="next">
+        <a href="../../case%20study/IHS-Markit-System-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: IHS Markit System Design Case Study (2020)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              File Compression Techniques in Big Data Systems
+              IHS Markit System Design Case Study (2020)
             </div>
           </div>
           <div class="md-footer__button md-icon">
