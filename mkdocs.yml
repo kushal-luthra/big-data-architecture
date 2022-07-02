@@ -30,6 +30,9 @@ nav:
   - HBase :
     - Why HBase : HBase/1-HBase.md
     - HBase Properties : HBase/2-HBase.md
+    - HBase Components : HBase/3-HBase.md
+    - HBase Architecture - Part 1 : HBase/4-HBase.md
+
   - Case Study:
     - IHS Markit System Design Case Study (2020): case study/IHS-Markit-System-Design.md
     - ZS Associates Data Consultant System Design Case Study (2020):  case study/ZS-Associates-Data-Consultant-Case-Study.md

@@ -21,6 +21,8 @@ Storage Layer <br>
 HBase <br>
 - [Why HBase? ](HBase/1-HBase.md) <br>
 - [HBase Properties ](HBase/2-HBase.md) <br>
+- [HBase Components ](HBase/3-HBase.md) <br>
+- [HBase Architecture - Part 1 ](HBase/4-HBase.md) <br>
 
 Case Study  <br>
 - [IHS Markit System Design Case Study (2020)](case study/IHS-Markit-System-Design.md) <br>
