@@ -17,7 +17,7 @@
     
     
       
-        <title>HBase Properties - Big Data Architecture Patterns</title>
+        <title>CAP Theorem - Big Data Architecture Patterns</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hbase-vs-relational-databases" class="md-skip">
+        <a href="#cap-theorem" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HBase Properties
+              CAP Theorem
             
           </span>
         </div>
@@ -483,82 +483,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          HBase Properties
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2-HBase/" class="md-nav__link">
         HBase Properties
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hbase-vs-relational-databases" class="md-nav__link">
-    Hbase Vs Relational Databases
-  </a>
-  
-    <nav class="md-nav" aria-label="Hbase Vs Relational Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#columnar-storage" class="md-nav__link">
-    Columnar storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denormalized-storage" class="md-nav__link">
-    Denormalized Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crud-operations-in-hbase" class="md-nav__link">
-    CRUD operations in Hbase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acid-compliance-at-row-level" class="md-nav__link">
-    ACID Compliance at row level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -610,11 +539,83 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../6-HBase/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CAP Theorem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CAP Theorem
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cap-theorem" class="md-nav__link">
+    CAP Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    Consistency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partition-tolerance" class="md-nav__link">
+    Partition tolerance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cap-theorem-wrt-distributed-systems" class="md-nav__link">
+    CAP Theorem w.r.t Distributed Systems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proving-cap-theorem-by-contradiction-approach" class="md-nav__link">
+    Proving CAP Theorem by Contradiction Approach
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -742,43 +743,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hbase-vs-relational-databases" class="md-nav__link">
-    Hbase Vs Relational Databases
-  </a>
-  
-    <nav class="md-nav" aria-label="Hbase Vs Relational Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#columnar-storage" class="md-nav__link">
-    Columnar storage
+  <a href="#cap-theorem" class="md-nav__link">
+    CAP Theorem
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#denormalized-storage" class="md-nav__link">
-    Denormalized Storage
+      
+        <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    Consistency
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#crud-operations-in-hbase" class="md-nav__link">
-    CRUD operations in Hbase
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#acid-compliance-at-row-level" class="md-nav__link">
-    ACID Compliance at row level
+      
+        <li class="md-nav__item">
+  <a href="#partition-tolerance" class="md-nav__link">
+    Partition tolerance
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#cap-theorem-wrt-distributed-systems" class="md-nav__link">
+    CAP Theorem w.r.t Distributed Systems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proving-cap-theorem-by-contradiction-approach" class="md-nav__link">
+    Proving CAP Theorem by Contradiction Approach
+  </a>
   
 </li>
       
@@ -794,75 +796,93 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/2-HBase.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/6-HBase.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>HBase Properties</h1>
+  <h1>CAP Theorem</h1>
 
-<p>Hadoop is not a database. <br>
-BigTable paper led to Hbase, which is a distributed database management system running on top of Hadoop. <br></p>
-<p>To recall 4 requirements of database are – <br>
-1.  Structured data <br>
-2.  Low latency <br>
-3.  Random reads <br>
-4.  ACID compliance <br></p>
-<p>Let us see how Hbase fares against these requirements of database. <br>
-1.  Structured – loose data structure. <br>
--   HBase is not as rigid as traditional databases like MySQL. For example, all rows will have equal number of columns.
-2.  Low latency – real time access using row-based indices called row keys. <br>
-3.  Random access – row keys allow access updates to one record. <br>
-4.  Somewhat ACID compliant – some transactions will have ACID properties. <br></p>
-<p>Hbase can offer 2 things – <br>
-1. Quick searching – based on row-keys. <br>
-2. Processing – mapreduce. <br>
-   Not the main use case as we already have Hive for this.</p>
-<h3 id="hbase-vs-relational-databases">Hbase Vs Relational Databases</h3>
-<p>Properties of Hbase – <br>
-1.  Columnar store  <br>
-2.  Denormalized storage <br>
-3.  Only CRUD operations <br>
-4.  ACID at row level. <br></p>
-<h4 id="columnar-storage">Columnar storage</h4>
-<p>Traditional databases provide row-based architecture, while Hbase provides column based <br></p>
-<p><img alt="img.png" src="../img_1.png" /><br> <br></p>
-<p>1 row is divided into many rows depending on number of columns. <br>
-Advantage of columnar of stores – <br>
-a.  Sparse tables – if your table is sparse, no waste when storing sparse data. <br>
-b.  Dynamic attributes – update attributes dynamically without changing storage structure. <br> </p>
-<p>Sparse Tables -  <br>
-In traditional databases, columns which have no values, they still occupy space even if no data is present in them. Thus, there is wastage of space. <br>
-In Hbase, we handle sparse tables. <br></p>
-<p>Dynamic attributes – <br>
-Unlike Hbase, in traditional databases changing column types/adding new columns/dropping them – all of this is a painful task. <br>
-In columnar store of Hbase, each row can have a different number of columns. For example, in below image, we have ‘expiry’ column for id 1 and 4 only. <br></p>
-<p><img alt="img.png" src="../img_2.png" /><br> <br></p>
-<p>Further no extra space – sparse table handled. <br>
-Dynamically adding columns. We can have different columns with different rows. <br></p>
-<h4 id="denormalized-storage">Denormalized Storage</h4>
-<p>In traditional database, data is normalized. <br>
-That is data is divided into multiple small tables. <br>
-In Hbase, we don’t prefer normalization.  <br>
-That means we store data into 1 big table. <br>
-Advantage. – read a single record to get all details about a person in a single read operation.  <br></p>
-<p><img alt="img.png" src="../img_3.png" /><br> <br></p>
-<h4 id="crud-operations-in-hbase">CRUD operations in Hbase</h4>
-<p>In normal database, we have join operations. <br>
-In Hbase, we can only perform CRUD operations. <br>
-Join/groupBy/orderBy – not supported in Hbase. <br>
-CRUD – create, read, update &amp; delete. <br>
-Note – since data is denormalized, so no need of Joins.  <br>
-This is why Hbase tables should be self-contained – i.e., contain all required info in 1 row. <br></p>
-<h4 id="acid-compliance-at-row-level">ACID Compliance at row level</h4>
-<p>Traditional databases are ACID compliant. <br>
-Hbase provides ACID compliance at row level. <br>
-That means,  <br>
-•   Whenever we are trying to update multiple columns for a single row, then either all of them will be updated or none will be updated. <br>
-•   When we talk about updates for multiple rows in Hbase then there is no guarantee. There could be a possibility that few rows got updated and rest not updated. <br>
-•   It also means, even if we are updating single column in multiple rows, there is no guarantee. <br></p>
-<p><img alt="img.png" src="../img_4.png" /><br></p>
+<h4 id="cap-theorem">CAP Theorem</h4>
+<p>Very important w.r.t. distributed databases. <br>
+•   C – consistency <br>
+•   A – availability <br>
+•   P – partition tolerance <br></p>
+<p>CAP theorem says that out of these 3, we can only get 2. <br>
+There is no way we can design a system with all 3 features as guarantee. <br>
+We have to decide our system based on our requirements – which feature we are Ok not having. <br></p>
+<p>Based on above, we have 3 kinds of systems – <br>
+•   CA system – consistency and availability <br>
+•   AP System – availability and partition tolerance <br>
+•   CP system – consistency and partition tolerance <br></p>
+<h4 id="consistency">Consistency</h4>
+<ul>
+<li>It means each node will hold the latest value. <br></li>
+<li>Whenever we seek result, we shall get latest value not older one. <br></li>
+<li>Eg – sending message to someone on WhatsApp; if that person is not connected to internet, that person shall not get any garbage info depicting that message until the time he connects back to internet. Instead, we shall give him correct data. <br>
+  We have to exactly give data which is latest. Eg - chat application. We don’t want to give stale info or garbage info to message sender. Rather there will be a timeout and status get updated as soon as receiver receives message. <br></li>
+<li>Similarly, in banking, consistency is priority. If bank doesn’t know latest balance it will deny transaction. It is ok to deny transaction if it is doubtful – but cannot allow transactions.  <br>
+  So, in banking we need consistency. <br></li>
+<li>Consistency means -&gt;  <ul>
+<li>Latest value is shown, and it is a guarantee that value shown is latest <br></li>
+</ul>
+</li>
+</ul>
+<h4 id="availability">Availability</h4>
+<ul>
+<li>System should always give a response no matter what. <br> </li>
+<li>Even if it is not sure that value is latest, it will return something. The system won’t timeout, the system won’t error out. <br></li>
+<li>To make sure system always gives response or do not error out, we need to compromise on one thing – that we cannot have consistency. Sometimes we give old data. <br></li>
+</ul>
+<h4 id="partition-tolerance">Partition tolerance</h4>
+<ul>
+<li>It states that a system will continue to operate even when there is network or partition failure. Even if system gets disconnected, it will continue to operate. <br></li>
+</ul>
+<h4 id="cap-theorem-wrt-distributed-systems">CAP Theorem w.r.t Distributed Systems</h4>
+<ul>
+<li>CAP theorem applies to distributed systems that store data. <br></li>
+<li>CAP theorem states that it is impossible for a distributed data store to simultaneously provide more than 2 out of 3 guarantees, namely consistency, availability, and partition tolerance. <br></li>
+<li>Consistency guarantees that every node in the distributed system returns the same most successful and recent write <br></li>
+<li>Availability is when every requires receives a response without the guarantee that it contains the most recent write <br></li>
+<li>Partition tolerance is when the system continues to function and upholds guarantees in spite of network failures. <br></li>
+</ul>
+<p><img alt="img.png" src="../img_11.png" /><br></p>
+<p>CA – provided by RDBMS systems <br>
+We won’t discuss CA further <br></p>
+<p>We focus on AP and CP. <br>
+Why – when we talk about distributed systems, we need to ensure partition tolerance is there. <br>
+So, the tradeoff is always between availability and consistency. We have to choose one or the other. <br></p>
+<p>NoSQL systems store data in a distributed manner across a cluster of interconnected machines and provide network partitioning. <br>
+There are 2 flavors of NoSQL databases that provide different set of guarantees – <br>
+- CP – HBase and MongoDB <br>
+- AP – Cassandra and DynamoDB <br></p>
+<p><img alt="img.png" src="../img_12.png" /><br>
+<img alt="img.png" src="../img_13.png" /><br>
+<img alt="img.png" src="../img_14.png" /><br></p>
+<p>CP – Eg - chat application. We don’t want to give stale info or garbage info to message sender. Rather there will be a timeout and status get updated as soon as receiver receives message. <br>
+Likewise in banking application, we need CP -&gt; GooglePay and Paytm gives error as consistency is important. <br></p>
+<p>AP – MMT travel portal.  <br></p>
+<p>Cases where we chose Consistency over Availability. <br>
+We want latest results. If results are not latest give error or timeout. <br>
+Eg – chat application, UPI, banking etc. <br></p>
+<p>Cases where we prefer availability over consistency. <br>
+We want immediate results even if it is not the latest. <br>
+Eg – MMT booking hotel on it –  <br>It shows a price, but system isn’t able to confirm if rates are latest or not. It tries to go with earlier result. Here we don’t want to error or timeout to customer as it will degrade user experience. <br> </p>
+<h4 id="proving-cap-theorem-by-contradiction-approach">Proving CAP Theorem by Contradiction Approach</h4>
+<p><img alt="img.png" src="../img_15.png" /><br>
+<img alt="img.png" src="../img_16.png" /><br>
+<img alt="img.png" src="../img_17.png" /><br>
+<img alt="img.png" src="../img_18.png" /><br>
+<img alt="img.png" src="../img_19.png" /><br></p>
+<p>Let us try to provide cap theorem by contradiction. <br> <br>
+Consider a case wherein we have 2 node cluster and each maintaining an initial value for object O with initial value v0. <br> <br>
+Now, both nodes have a copy of vO with them <br> <br>
+Then if network failure happens, then client request comes in such that it updates value of Object v0 to v1 on G1. <br> <br>
+Now, another client comes in, and connects to G2 machine and pulls value of object O, and it gets vO and not v1 which is latest. If you want to be consistent, the system should wait until network gets restored. So, there will be a timeout if you want to be consistent. <br> <br>
+This contradicts our all 3 guarantees. <br> <br>
+CAP theorem proved. <br> <br>
+Note network partition means network failure. <br> <br></p>
 
               
             </article>
@@ -876,7 +896,7 @@ That means,  <br>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../1-HBase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why HBase" rel="prev">
+        <a href="../5-HBase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HBase Architecture - Part 2" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -885,20 +905,20 @@ That means,  <br>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Why HBase
+              HBase Architecture - Part 2
             </div>
           </div>
         </a>
       
       
         
-        <a href="../3-HBase/" class="md-footer__link md-footer__link--next" aria-label="Next: HBase Components" rel="next">
+        <a href="../../case%20study/IHS-Markit-System-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: IHS Markit System Design Case Study (2020)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              HBase Components
+              IHS Markit System Design Case Study (2020)
             </div>
           </div>
           <div class="md-footer__button md-icon">

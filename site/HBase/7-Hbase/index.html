@@ -17,7 +17,7 @@
     
     
       
-        <title>HBase Properties - Big Data Architecture Patterns</title>
+        <title>7 Hbase - Big Data Architecture Patterns</title>
       
     
     
@@ -62,11 +62,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#hbase-vs-relational-databases" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HBase Properties
+              7 Hbase
             
           </span>
         </div>
@@ -441,14 +436,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -483,82 +476,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          HBase Properties
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2-HBase/" class="md-nav__link">
         HBase Properties
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hbase-vs-relational-databases" class="md-nav__link">
-    Hbase Vs Relational Databases
-  </a>
-  
-    <nav class="md-nav" aria-label="Hbase Vs Relational Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#columnar-storage" class="md-nav__link">
-    Columnar storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denormalized-storage" class="md-nav__link">
-    Denormalized Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crud-operations-in-hbase" class="md-nav__link">
-    CRUD operations in Hbase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acid-compliance-at-row-level" class="md-nav__link">
-    ACID Compliance at row level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -735,55 +657,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hbase-vs-relational-databases" class="md-nav__link">
-    Hbase Vs Relational Databases
-  </a>
-  
-    <nav class="md-nav" aria-label="Hbase Vs Relational Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#columnar-storage" class="md-nav__link">
-    Columnar storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denormalized-storage" class="md-nav__link">
-    Denormalized Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crud-operations-in-hbase" class="md-nav__link">
-    CRUD operations in Hbase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acid-compliance-at-row-level" class="md-nav__link">
-    ACID Compliance at row level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -794,75 +667,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/2-HBase.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/HBase/7-Hbase.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>HBase Properties</h1>
+  <h1>7 Hbase</h1>
 
-<p>Hadoop is not a database. <br>
-BigTable paper led to Hbase, which is a distributed database management system running on top of Hadoop. <br></p>
-<p>To recall 4 requirements of database are – <br>
-1.  Structured data <br>
-2.  Low latency <br>
-3.  Random reads <br>
-4.  ACID compliance <br></p>
-<p>Let us see how Hbase fares against these requirements of database. <br>
-1.  Structured – loose data structure. <br>
--   HBase is not as rigid as traditional databases like MySQL. For example, all rows will have equal number of columns.
-2.  Low latency – real time access using row-based indices called row keys. <br>
-3.  Random access – row keys allow access updates to one record. <br>
-4.  Somewhat ACID compliant – some transactions will have ACID properties. <br></p>
-<p>Hbase can offer 2 things – <br>
-1. Quick searching – based on row-keys. <br>
-2. Processing – mapreduce. <br>
-   Not the main use case as we already have Hive for this.</p>
-<h3 id="hbase-vs-relational-databases">Hbase Vs Relational Databases</h3>
-<p>Properties of Hbase – <br>
-1.  Columnar store  <br>
-2.  Denormalized storage <br>
-3.  Only CRUD operations <br>
-4.  ACID at row level. <br></p>
-<h4 id="columnar-storage">Columnar storage</h4>
-<p>Traditional databases provide row-based architecture, while Hbase provides column based <br></p>
-<p><img alt="img.png" src="../img_1.png" /><br> <br></p>
-<p>1 row is divided into many rows depending on number of columns. <br>
-Advantage of columnar of stores – <br>
-a.  Sparse tables – if your table is sparse, no waste when storing sparse data. <br>
-b.  Dynamic attributes – update attributes dynamically without changing storage structure. <br> </p>
-<p>Sparse Tables -  <br>
-In traditional databases, columns which have no values, they still occupy space even if no data is present in them. Thus, there is wastage of space. <br>
-In Hbase, we handle sparse tables. <br></p>
-<p>Dynamic attributes – <br>
-Unlike Hbase, in traditional databases changing column types/adding new columns/dropping them – all of this is a painful task. <br>
-In columnar store of Hbase, each row can have a different number of columns. For example, in below image, we have ‘expiry’ column for id 1 and 4 only. <br></p>
-<p><img alt="img.png" src="../img_2.png" /><br> <br></p>
-<p>Further no extra space – sparse table handled. <br>
-Dynamically adding columns. We can have different columns with different rows. <br></p>
-<h4 id="denormalized-storage">Denormalized Storage</h4>
-<p>In traditional database, data is normalized. <br>
-That is data is divided into multiple small tables. <br>
-In Hbase, we don’t prefer normalization.  <br>
-That means we store data into 1 big table. <br>
-Advantage. – read a single record to get all details about a person in a single read operation.  <br></p>
-<p><img alt="img.png" src="../img_3.png" /><br> <br></p>
-<h4 id="crud-operations-in-hbase">CRUD operations in Hbase</h4>
-<p>In normal database, we have join operations. <br>
-In Hbase, we can only perform CRUD operations. <br>
-Join/groupBy/orderBy – not supported in Hbase. <br>
-CRUD – create, read, update &amp; delete. <br>
-Note – since data is denormalized, so no need of Joins.  <br>
-This is why Hbase tables should be self-contained – i.e., contain all required info in 1 row. <br></p>
-<h4 id="acid-compliance-at-row-level">ACID Compliance at row level</h4>
-<p>Traditional databases are ACID compliant. <br>
-Hbase provides ACID compliance at row level. <br>
-That means,  <br>
-•   Whenever we are trying to update multiple columns for a single row, then either all of them will be updated or none will be updated. <br>
-•   When we talk about updates for multiple rows in Hbase then there is no guarantee. There could be a possibility that few rows got updated and rest not updated. <br>
-•   It also means, even if we are updating single column in multiple rows, there is no guarantee. <br></p>
-<p><img alt="img.png" src="../img_4.png" /><br></p>
+
 
               
             </article>
@@ -872,41 +685,6 @@ That means,  <br>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../1-HBase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why HBase" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Why HBase
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../3-HBase/" class="md-footer__link md-footer__link--next" aria-label="Next: HBase Components" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              HBase Components
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

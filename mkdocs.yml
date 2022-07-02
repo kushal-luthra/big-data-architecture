@@ -33,6 +33,7 @@ nav:
     - HBase Components : HBase/3-HBase.md
     - HBase Architecture - Part 1 : HBase/4-HBase.md
     - HBase Architecture - Part 2 : HBase/5-HBase.md
+    - CAP Theorem : HBase/6-HBase.md
 
 
   - Case Study:
