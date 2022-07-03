@@ -27,6 +27,9 @@ HBase <br>
 - [CAP Theorem](HBase/6-HBase.md) <br>
 - [Cassandra: An introduction](HBase/7-HBase.md) <br>
 
+Presto <br>
+- [What is Presto?](Presto/1-Presto.md)
+
 Case Study  <br>
 - [IHS Markit System Design Case Study (2020)](case study/IHS-Markit-System-Design.md) <br>
 - [ZS Associates Data Consultant System Design Case Study (2020)](case study/ZS-Associates-Data-Consultant-Case-Study.md) <br>

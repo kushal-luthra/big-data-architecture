@@ -35,7 +35,8 @@ nav:
     - HBase Architecture - Part 2 : HBase/5-HBase.md
     - CAP Theorem : HBase/6-HBase.md
     - Cassandra An introduction : HBase/7-HBase.md
-
+  - Presto :
+      - What is Presto? : Presto/1-Presto.md
   - Case Study:
     - IHS Markit System Design Case Study (2020): case study/IHS-Markit-System-Design.md
     - ZS Associates Data Consultant System Design Case Study (2020):  case study/ZS-Associates-Data-Consultant-Case-Study.md
