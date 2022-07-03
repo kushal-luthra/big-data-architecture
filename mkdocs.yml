@@ -34,11 +34,12 @@ nav:
     - HBase Architecture - Part 1 : HBase/4-HBase.md
     - HBase Architecture - Part 2 : HBase/5-HBase.md
     - CAP Theorem : HBase/6-HBase.md
-    - CCassandra An introduction : HBase/7-HBase.md
+    - Cassandra An introduction : HBase/7-HBase.md
 
   - Case Study:
     - IHS Markit System Design Case Study (2020): case study/IHS-Markit-System-Design.md
     - ZS Associates Data Consultant System Design Case Study (2020):  case study/ZS-Associates-Data-Consultant-Case-Study.md
+    - CTM System Design : case study/CTM-UK.md
     - Interview Questions : case study/Sample-Questions-System-Design.md
   - About Me: aboutme.md
 

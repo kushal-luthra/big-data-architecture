@@ -17,7 +17,7 @@
     
     
       
-        <title>Design uber - Big Data Architecture Patterns</title>
+        <title>CTM System Design - Big Data Architecture Patterns</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#background" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Design uber
+              CTM System Design
             
           </span>
         </div>
@@ -568,12 +573,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -622,11 +629,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../CTM-UK/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CTM System Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CTM System Design
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail" class="md-nav__link">
+    Technical Detail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-for-the-interview" class="md-nav__link">
+    Task for the Interview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#please-answer-the-following" class="md-nav__link">
+    Please answer the following
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -685,6 +750,42 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail" class="md-nav__link">
+    Technical Detail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-for-the-interview" class="md-nav__link">
+    Task for the Interview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#please-answer-the-following" class="md-nav__link">
+    Please answer the following
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -695,28 +796,30 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/case study/design uber.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kushal-luthra/big-data-architecture/edit/main/docs/case study/CTM-UK.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Design uber</h1>
+  <h1>CTM System Design</h1>
 
-<p>Requirements
-3 high level requirememts.
-- users should be able to raise a request for cab.
-- match customer to driver who is nearby.
-- route cab is going to follow, and associated ETA.</p>
-<p>Think at very high level,
-our 2 main users are -
-- taxi driver - tell availability through web
-- client - makes request for cab through web.</p>
-<p>need a matching system to match user and drievr.
-we sgould have maps/eta service - to tell route to be followed and what is its ETA.
-store information in database.
-system to do analytcis - answer business quetsion like where cabs are most located, who are my prime custoemrs, fraud etc.</p>
-<p><a href="https://www.youtube.com/watch?v=fgIgOU0yi0w&amp;list=PL9sbKmQTkW07EzCVhfZ1h1V1TCW0aKK6k">Source: Data Savvy </a> </p>
+<h4 id="background">Background</h4>
+<p>CTM is just starting its journey to make use of the data that has been captured since launch. <br> 
+The first data driven capability identified by the business is the automatic sorting of the insurance products returned to a customer based on their past selections and similar customer selections. <br><br />
+In essence we want to understand better what customers are focused on when using the site and therefore use that understanding to present their results in a manner that is more personalised.  <br></p>
+<h4 id="technical-detail">Technical Detail</h4>
+<p>Our events in JSON format are pushed onto Kafka from a number of services, capturing all activity on the main site e.g., changes to customer personal details, when a customer has purchased insurance etc.  <br>
+These events are read from Kafka and saved in an S3 bucket in a single sub directory.   <br></p>
+<h4 id="task-for-the-interview">Task for the Interview</h4>
+<p>Assuming that nothing else besides the above exists; come up with high-level options to build this data processing pipeline. <br></p>
+<p>You can make any assumptions necessary about the platform or the data, but please state what these are and the reasons behind them.  <br>
+Considering aspects such as streaming vs batch processing, testing, performance, implementation and documentation. <br></p>
+<h4 id="please-answer-the-following">Please answer the following</h4>
+<p>•   Whiteboard a high-level design for the solution (present in any tool, whiteboard, PPT, Miro etc.) <br>
+•   Detail your thought process needed to efficiently implement the new technical solution  <br>
+•   For Streaming assume data is pushed to Kafka as described above, for batch assume data is on some filesystem/object store such as SFTP or S3. <br>
+•   Describe the challenges that might arise regarding data quality across the platform <br></p>
 
               
             </article>
@@ -726,6 +829,41 @@ system to do analytcis - answer business quetsion like where cabs are most locat
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ZS-Associates-Data-Consultant-Case-Study/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ZS Associates Data Consultant System Design Case Study (2020)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ZS Associates Data Consultant System Design Case Study (2020)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Sample-Questions-System-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: Interview Questions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Interview Questions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
