@@ -11,7 +11,8 @@ Cost of garbage collection is proportional to the number of Java objects. So if 
 when you have large number of RDDs in your job, GC becomes a point of worry. <br>
 It is usually not a problem in programs that just read an RDD once and then run many operations on it. <br>
  <br>
-b. if object is large, prefer caching in serialized form - as serialized object require less storage. <br>
+b. Kryo serialization - <br>
+if object is large, prefer caching in serialized form - as serialized object require less storage. <br>
 Use Kryo serialization if you want to cache data in serialized form, as it leads to much smaller sizes than Java serialization. <br>
  <br>
 c. Measuring the Impact of GC -> <br>
