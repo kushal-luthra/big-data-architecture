@@ -30,7 +30,10 @@ HBase <br>
 Presto <br>
 - [What is Presto?](Presto/1-Presto.md)
 
-Case Study  <br>
+Spark <br>
+- [Garbage Collection in Spark](Spark/Garbage Collection in Spark.md) <br>
+
+- Case Study  <br>
 - [IHS Markit System Design Case Study (2020)](case study/IHS-Markit-System-Design.md) <br>
 - [ZS Associates Data Consultant System Design Case Study (2020)](case study/ZS-Associates-Data-Consultant-Case-Study.md) <br>
 - [CTM System Design](case study/CTM-UK.md)
