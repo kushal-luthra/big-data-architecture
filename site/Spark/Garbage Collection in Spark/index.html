@@ -429,6 +429,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storage%20Layer%20Choices/Choosing%20a%20Database/" class="md-nav__link">
+        Choosing a Database
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -948,16 +962,17 @@ Use Kryo serialization if you want to cache data in serialized form, as it leads
 By  adding <strong>-verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps</strong>  <br>
 This will collect statistics on how frequently garbage collection occurs and the amount of time spent GC. <br>
  <br></li>
-<li>Advanced GC Tuning <br>
-Java Heap space is divided into 2 regions Young and Old. <br> <ul>
-<li>Young generation is meant to hold short-lived objects - it is sub-divided into 3 regions - Eden. Survivor1, Survivor2. <br></li>
-<li>Old generation is intended for objects with longer lifetimes <br>
- <br>
-A simplified description of the GC Procedure:  <br></li>
-<li>When Eden is full, a MINOR GC is run on Eden and objects that are alive from Eden and Survivor1 are copied to Survivor2. <br> 
-The Survivor regions are swapped.  <br></li>
-<li>If an object is old enough or Survivor2 is full, it is moved to Old. <br> </li>
-<li>Finally, when Old is close to full, a FULL GC is invoked. <br>
+<li>Advanced GC Tuning <br></li>
+</ol>
+<p>Java Heap space is divided into 2 regions Young and Old.<br />
+* Young generation is meant to hold short-lived objects - it is sub-divided into 3 regions - Eden. Survivor1, Survivor2. <br>
+* Old generation is intended for objects with longer lifetimes <br>
+<br>
+A simplified description of the GC Procedure:  <br>
+  - When Eden is full, a MINOR GC is run on Eden and objects that are alive from Eden and Survivor1 are copied to Survivor2. <br> 
+  The Survivor regions are swapped.  <br>
+  - If an object is old enough or Survivor2 is full, it is moved to Old. <br> 
+  - Finally, when Old is close to full, a FULL GC is invoked. <br>
  <br>
 The goal of GC tuning in Spark is to ensure that only long-lived RDDs are stored in the Old generation and that the Young generation is sufficiently sized to store short-lived objects. <br>
  <br>
@@ -967,14 +982,11 @@ If a full GC is invoked multiple times for before a task completes, it means tha
  <br>
 ii. If there are too many minor collections but not many major GCs, allocating more memory for Eden would help. <br>
  <br>
-iii. If the OldGen is close to being full -&gt; <br></li>
-<li>reduce the amount of memory used for caching by lowering spark.memory.fraction; it is better to cache fewer objects than to slow down task execution. <br> </li>
-<li>Alternatively, consider decreasing the size of the Young generation.  <br>
+iii. If the OldGen is close to being full -&gt; <br>
+  - reduce the amount of memory used for caching by lowering spark.memory.fraction; it is better to cache fewer objects than to slow down task execution. <br> 
+  - Alternatively, consider decreasing the size of the Young generation.  <br>
 <br>
-iv. Try the G1GC garbage collector. <br></li>
-</ul>
-</li>
-</ol>
+iv. Try the G1GC garbage collector. <br></p>
 
               
             </article>

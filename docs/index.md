@@ -17,7 +17,7 @@ Storage Layer <br>
 - [Text-based File Formats](Storage Layer Choices/Text File Formats.md) <br>
 - [Big Data File Formats](Storage Layer Choices/big data file formats.md) <br>
 - [File Compression Techniques in Big Data Systems](Storage Layer Choices/File Compression techniques in Big Data.md) <br>
-
+- [Choosing a Database](Storage Layer Choices/Choosing a Database.md)<br>
 HBase <br>
 - [Why HBase? ](HBase/1-HBase.md) <br>
 - [HBase Properties ](HBase/2-HBase.md) <br>

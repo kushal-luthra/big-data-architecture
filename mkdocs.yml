@@ -27,6 +27,7 @@ nav:
       - Text-based File Formats : Storage Layer Choices/Text File Formats.md
       - Big Data File Formats : Storage Layer Choices/big data file formats.md
       - File Compression Techniques in Big Data Systems :  Storage Layer Choices/File Compression techniques in Big Data.md
+      - Choosing a Database : Storage Layer Choices/Choosing a Database.md
   - HBase :
     - Why HBase : HBase/1-HBase.md
     - HBase Properties : HBase/2-HBase.md
