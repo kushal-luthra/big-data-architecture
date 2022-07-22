@@ -38,6 +38,7 @@ Case Study  <br>
 - [ZS Associates Data Consultant System Design Case Study (2020)](case study/ZS-Associates-Data-Consultant-Case-Study.md) <br>
 - [CTM System Design](case study/CTM-UK.md)
 - [Interview Questions](case study/Sample-Questions-System-Design.md)
+- [Expedia ML Engineer Interview Question](case study/expedia-ML-engineer.md)
 <br><br><br>
 **Author** : [Kushal Luthra](aboutme.md) <br>
 **repo url** : https://github.com/kushal-luthra/big-data-architecture
