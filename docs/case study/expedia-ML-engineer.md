@@ -51,9 +51,9 @@ df\
 #### Expedia ML Engineer Round 3
 This is primarily System Design round. <br>
 Questions asked are -> <br>
-1. Discuss your main project in company, and what is your Technology stack? <br><br>
+Discuss your main project in company, and what is your Technology stack? <br><br>
 
-2. Case Study <br>
+Case Study <br>
 Expedia partners with Hotels to consult them to earn more revenue by pricing their facilities rightly. <br>
  
 Consider a use case wherein, partners want answer to below questions -> <br>

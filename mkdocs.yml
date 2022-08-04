@@ -41,11 +41,15 @@ nav:
   - Spark :
     - Garbage Collection in Spark: Spark/Garbage Collection in Spark.md
   - Case Study:
+    - Meesho Data Engineer Interview Questions : case study/Meesho Interview Questions.md
+    - Economist Sr. Engineering Manager Interview Questions: case study/Economist Sr. Engineering Manager Interview Questions.md
+    - InMobi Interview Questions: case study/InMobi Interview Questions.md
+    - Expedia ML Engineer Interview Question : case study/expedia-ML-engineer.md
+    - CTM System Design : case study/CTM-UK.md
     - IHS Markit System Design Case Study (2020): case study/IHS-Markit-System-Design.md
     - ZS Associates Data Consultant System Design Case Study (2020):  case study/ZS-Associates-Data-Consultant-Case-Study.md
-    - CTM System Design : case study/CTM-UK.md
-    - Interview Questions : case study/Sample-Questions-System-Design.md
-    - Expedia ML Engineer Interview Question : case study/expedia-ML-engineer.md
+    - Uber System Design Interview Question (2020): case study/Uber System Design Question (2020).md
+
   - About Me: aboutme.md
 
 extra:

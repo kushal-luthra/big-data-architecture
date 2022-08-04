@@ -34,11 +34,15 @@ Spark <br>
 - [Garbage Collection in Spark](Spark/Garbage Collection in Spark.md) <br>
 
 Case Study  <br>
+- [Meesho Data Engineer Interview Questions](case study/Meesho Interview Questions.md) <br>
+- [Economist Sr. Engineering Manager Interview Questions](case study/Economist Sr. Engineering Manager Interview Questions.md) <br>
+- [InMobi Interview Questions](case study/InMobi Interview Questions.md) <br>
+- [Expedia ML Engineer Interview Question](case study/expedia-ML-engineer.md) <br>
+- [CTM System Design](case study/CTM-UK.md) <br>
 - [IHS Markit System Design Case Study (2020)](case study/IHS-Markit-System-Design.md) <br>
 - [ZS Associates Data Consultant System Design Case Study (2020)](case study/ZS-Associates-Data-Consultant-Case-Study.md) <br>
-- [CTM System Design](case study/CTM-UK.md)<br>
-- [Interview Questions](case study/Sample-Questions-System-Design.md)<br>
-- [Expedia ML Engineer Interview Question](case study/expedia-ML-engineer.md)<br>
+- [Uber System Design Interview Question (2020)](case study/Uber System Design Question (2020).md) <br>
+
 <br><br><br>
 **Author** : [Kushal Luthra](aboutme.md) <br>
 **repo url** : https://github.com/kushal-luthra/big-data-architecture
