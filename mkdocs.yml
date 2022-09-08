@@ -41,6 +41,7 @@ nav:
   - Spark :
     - Garbage Collection in Spark: Spark/Garbage Collection in Spark.md
     - Dynamic Coalescing in Spark : Spark/Dynamic_coalescing.md
+    - Probablistic Data Structures : Spark/probablistic data structures.md
   - Case Study:
     - Meesho Data Engineer Interview Questions : case study/Meesho Interview Questions.md
     - Economist Sr. Engineering Manager Interview Questions: case study/Economist Sr. Engineering Manager Interview Questions.md
